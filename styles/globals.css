@@ -8,6 +8,7 @@ body {
     background-color: #161616;
     color: #fff;
     font-family: 'Lexend Deca', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -60,10 +61,7 @@ a {
     color: black;
 }
 
-
 #name {
-    text-align: center;
-
     background: linear-gradient(to right, #333, #333, #333, #333,#ee7752, #e73c7e, #23a6d5, #23d5ab, #fff,#fff,#fff,#fff);
     background-size: 500% 500%;
 

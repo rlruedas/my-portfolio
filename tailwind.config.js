@@ -10,7 +10,7 @@ module.exports = {
       'icon-bg': '#333',
       'secondary': '#ffed4a',
       'danger': '#e3342f',
-     }
+    },
   },
   variants: {
     extend: {},
