@@ -112,7 +112,7 @@ export default function Home() {
             <a href="#About" className="pl-2 pr-2 mx-2  hover:text-matteRed">About</a>
             <a href="#Projects" className="pl-2 pr-2 mx-2 hover:text-white">Projects</a>
             <a href="#Contact" className="pl-2 pr-2 mx-2  hover:text-white">Contact</a>
-            <a href="" className="pl-2 pr-2 mx-2 rounded-md  hover:text-white">Blog</a>
+            <a href="_self" className="pl-2 pr-2 mx-2 rounded-md  hover:text-white">Blog</a>
           </ul>
           <button className="" >
             <a className="pl-2 pr-2 mx-2 rounded-md block right-40 top-2" onClick={() => setBurgerMenuClick(false)} >
@@ -202,7 +202,6 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col w-full h-full items-center justify-center self-center text-black " id="Projects">
-          {/* <h1 className="text-black text-5xl " >In Development</h1> */}
           <Projects />
         </section>
 
