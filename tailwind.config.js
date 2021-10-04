@@ -65,16 +65,44 @@ module.exports = {
         '.100': '100%',
       },
       fontSize: {
-        '10xl': '240px'
+        'tiny': '.875em',
+        'base': '1em',
+        'lg': '1.125em',
+        'xl': '1.25em',
+        '2xl': '1.5em',
+        '3xl': '1.875em',
+        '4xl': '2.25em',
+        '5xl': '3em',
+        '6xl': '4em',
+        '7xl': '5em',
       },
+
+
     },
     fontFamily: {
       body: ['Poppins']
     },
-
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover', 'focus'],
+      top: ['hover', 'focus', 'group-hover'],
+      bottom: ['hover', 'focus'],
+      left: ['hover', 'focus'],
+      right: ['hover', 'focus', 'group-hover'],
+      inset: ['hover', 'focus', 'group-hover'],
+      transform: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus',],
+      transformOrigin: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      transitionDelay: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      transitionDuration: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      transitionProperty: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      transitionTimingFunction: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      transition: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      translate: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+      animation: ['hover', 'focus', 'group-hover'],
+      display: ['hover', , 'focus', 'group-hover'],
+
+    },
   },
   plugins: [],
 }

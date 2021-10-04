@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 body {
     padding: 0;
@@ -7,6 +8,7 @@ body {
     z-index: 0;
     background-color: #000000;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 a {
@@ -55,7 +57,7 @@ a {
     color: black;
 } */
 
-#name Fade{
+/* #name Fade{
     background: linear-gradient(to right, #333, #333, #333, #333,#ee7752, #e73c7e, #23a6d5, #23d5ab, #333,#333,#333,#333);
     background-size: 500% 500%;
 
@@ -66,7 +68,7 @@ a {
 
     animation: gradient 10s linear infinite;
 
-}
+} */
 /* #header a:hover {
     background: linear-gradient(to right, #FFE53B 0%, #FF2525 74%);
     background-size: 400% 400%;
@@ -76,7 +78,7 @@ a {
     animation: gradient 2s linear infinite;
 
 } */
-@keyframes gradient {
+/* @keyframes gradient {
     0% {
         background-position: 0 50%;
     }
@@ -86,4 +88,4 @@ a {
     100% {
         background-position: 0 50%;
     }
-}
+} */

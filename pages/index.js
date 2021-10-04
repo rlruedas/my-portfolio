@@ -3,24 +3,15 @@ import Head from 'next/head'
 import Flip from 'react-reveal/Flip'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
+import Tada from 'react-reveal/Tada';
 import Projects from '../pages/public/projects'
 import Services from '../pages/public/services'
-
-function useHover() {
-  const [hovering, setHovering] = useState(false)
-  const onHoverProps = {
-    onMouseEnter: () => setHovering(true),
-    onMouseLeave: () => setHovering(false),
-  }
-  return [hovering, onHoverProps]
-}
 
 export default function Home() {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   const [burgerMenuClick, setBurgerMenuClick] = useState(false);
   const [flipCard, setFlipCard] = useState(false);
-  const [nameAIsHovering, nameAHoverProps] = useHover()
 
   const updateDimensions = () => {
     setWidth(window.innerWidth);
@@ -28,12 +19,29 @@ export default function Home() {
   }
 
   useEffect(() => {
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
 
+
+    window.addEventListener("resize", updateDimensions);
+    if (width >= 1280) {
+      document.getElementById("myLinks").className = "hidden";
+    }
+
+    return () => window.removeEventListener("resize", updateDimensions);
   }, [width]);
 
+  function burgerMenu() {
+    var x = document.getElementById("myLinks").className;
+    console.log(x)
+    if (x === "block") {
+      document.getElementById("myLinks").className = "hidden";
+    } else {
+      document.getElementById("myLinks").className = "block";
+    }
+  }
 
+  function onBurgerMenuClick() {
+    document.getElementById("myLinks").className = "hidden";
+  }
 
   function BusinessCard() {
     return (
@@ -81,7 +89,7 @@ export default function Home() {
             </form>
             <form className="flex flex-col">
               <input className="rounded-md h-10 bg-seashell placeholder-black  mb-1 pl-4" type="text" placeholder="Subject" />
-              <textarea className="rounded-md h-36 bg-seashell  placeholder-black  mb-1 p-4 text-justify " res type="text" placeholder="Message" />
+              <textarea className="rounded-md h-36 bg-seashell  placeholder-black  mb-1 p-4 text-justify " type="text" placeholder="Message" />
               <input className="rounded-md h-10 w-2/4 bg-seashell placeholder-black self-end" type="submit" value="Send Message" />
             </form>
           </div>
@@ -96,43 +104,13 @@ export default function Home() {
   function NormalMenu() {
     return (
       <ul className="flex flex-row text-lg" id="header">
-        <a href="#About" className="pl-2 pr-2 mx-2 hover:text-white">About</a>
-        <a href="#Projects" className="pl-2 pr-2 mx-2  hover:text-white">Projects</a>
-        <a href="#Contact" className="pl-2 pr-2 mx-2 hover:text-white">Contact</a>
-        <a href="" className="pl-2 pr-2 mx-2 rounded-md hover:text-white">Blog</a>
+        <a href="#About" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b ">About</a>
+        <a href="#Projects" className="pl-2 pr-2 mx-2  hover:text-white hover:border-b">Projects</a>
+        <a href="#Contact" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b">Contact</a>
+        <a href="" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b">Blog</a>
       </ul>
     )
   }
-
-  function BurgerMenu() {
-    if (burgerMenuClick) {
-      return (
-        <div className="flex flex-row relative">
-          <ul className="flex flex-col text-lg absolute right-10 sm " id="header">
-            <a href="#About" className="pl-2 pr-2 mx-2  hover:text-matteRed">About</a>
-            <a href="#Projects" className="pl-2 pr-2 mx-2 hover:text-white">Projects</a>
-            <a href="#Contact" className="pl-2 pr-2 mx-2  hover:text-white">Contact</a>
-            <a href="_self" className="pl-2 pr-2 mx-2 rounded-md  hover:text-white">Blog</a>
-          </ul>
-          <button className="" >
-            <a className="pl-2 pr-2 mx-2 rounded-md block right-40 top-2" onClick={() => setBurgerMenuClick(false)} >
-              <i className="fa fa-bars "></i>
-            </a>
-          </button>
-        </div>
-
-      )
-    }
-
-    return (
-      <button className="" >
-        <a className="pl-2 pr-2 mx-2 rounded-md block right-40 bottom-0 top-2" onClick={() => setBurgerMenuClick(true)} >
-          <i className="fa fa-bars "></i>
-        </a>
-      </button>
-    )
-  }
-
 
 
   return (
@@ -149,34 +127,52 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
 
-      <main className={"flex flex-col z-50 bg-seashell"} >
+      <main className={"flex flex-col z-50 bg-matteOrange"} >
 
-        <section className="flex flex-row w-full py-2 justify-around items-center absolute text-jet ">
+        <section className="flex flex-row w-full h-14 justify-around items-center absolute top-0 text-jet z-50 ">
           <a href="">
-            <img src="/logo-nobg.png" alt={"Image"} className="rounded-lg w-12 h-12 lg:mr-96 " ></img>
+            <p className="text-2xl" >RR</p>
           </a>
           {
-            width <= 1280 ? <BurgerMenu /> : <NormalMenu />
+            width <= 1280 ?
+              <button className="" >
+                <a className="rounded-md block" onClick={() => burgerMenu()} >
+                  <i className="fa fa-bars "></i>
+                </a>
+              </button> : <NormalMenu />
           }
 
         </section>
+        <section className="hidden" id="myLinks">
+          <div className="flex flex-row justify-center bg-white w-screen h-screen absolute top-10 z-50" >
+            <ul className="flex flex-col text-lg sm bg-matteOrange w-screen h-screen justify-center items-center" id="header">
+              <a href="#About" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-white" onClick={() => onBurgerMenuClick()} >About</a>
+              <a href="#Projects" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Projects</a>
+              <a href="#Contact" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Contact</a>
+              <a href="" className="pl-2 pr-2 mx-2 rounded-md w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Blog</a>
+            </ul>
+          </div>
 
-        <section className="flex flex-col w-full items-center justify-center self-center pb-10 h-screen bg-gradient-to-r from-yellow-400 to-yellow-700 text-jet" >
-          <h4 className="text-center font-thin text-2xl lg:text-4xl text-opacity-30 pb-10 ">HELLO! I'M</h4>
-          <Fade big >
-            <h1 className="flex flex-initial transform-gpu text-center text-7xl mr-5" {...nameAHoverProps}>
-              {nameAIsHovering ? <Zoom cascade>
-                <h1>
-                  A Software Engineer
-                </h1>
-              </Zoom>
-                : "Reister L. Ruedas"
-              }
-            </h1>
-          </Fade>
         </section>
 
-        <section className="flex flex-initial w-3/4 h-screen items-center self-center text-darksalmon" id="About" >
+        <section className="flex flex-col w-full items-center justify-center self-center pb-10 h-screen text-jet" >
+         
+          <h1 className="group flex flex-col text-center " >
+            <h4 className="block text-center font-thin text-2xl lg:text-4xl pb-10 group-hover:hidden ">Hello! I'm</h4>
+            <Tada>
+              <p className="hidden text-7xl group-hover:flex">
+                A Software Engineer
+              </p>
+            </Tada>
+            <Tada>
+              <p className="flex text-7xl group-hover:hidden" >
+                Reister L. Ruedas
+              </p>
+            </Tada>
+          </h1>
+        </section>
+
+        <section className="flex flex-initial w-3/4 h-screen items-center self-center text-darkliver" id="About" >
           <div className="flex flex-initial  flex-col lg:grid lg:grid-cols-2 lg:gap-5">
             <Fade left cascade>
               <p className="text-7xl text-left font-semibold  text-opacity-10" >ABOUT ME</p>
@@ -201,14 +197,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col w-full h-full items-center justify-center self-center text-black " id="Projects">
-          <Projects />
-        </section>
-
         <section className="flex flex-col w-screen h-screen item-center self-center my-20" >
           <div className="flex flex-col  items-center justify-center relative ">
             <Services />
           </div>
+        </section>
+
+        <section className="flex flex-col w-full h-full items-center justify-center self-center text-black " id="Projects">
+          <Projects />
         </section>
 
         <section className="flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center  " id="Contact" >
