@@ -64,7 +64,7 @@ export default function Home() {
               </div>
               <div className="" >
                 <p className="pb-1"><i className="fa fa-file-text"></i></p>
-                <a href="" className="rounded-md bg-transparent placeholder-gray-700 self-end hover:opacity-50" download >Download Resume</a>
+                <a href="./Resume-Reister-Ruedas.pdf" className="rounded-md bg-transparent placeholder-gray-700 self-end hover:opacity-50" download >Download Resume</a>
               </div>
             </div>
           </div>
