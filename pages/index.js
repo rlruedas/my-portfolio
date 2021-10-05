@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Flip from 'react-reveal/Flip'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
-import Tada from 'react-reveal/Tada';
 import Projects from '../pages/public/projects'
 import Services from '../pages/public/services'
+import Techstack from '../pages/public/techstack'
 
 export default function Home() {
   const [width, setWidth] = useState();
@@ -19,19 +19,17 @@ export default function Home() {
   }
 
   useEffect(() => {
-
-
     window.addEventListener("resize", updateDimensions);
+
     if (width >= 1280) {
       document.getElementById("myLinks").className = "hidden";
     }
 
     return () => window.removeEventListener("resize", updateDimensions);
-  }, [width]);
+  }, []);
 
   function burgerMenu() {
     var x = document.getElementById("myLinks").className;
-    console.log(x)
     if (x === "block") {
       document.getElementById("myLinks").className = "hidden";
     } else {
@@ -81,13 +79,13 @@ export default function Home() {
   function BusinessCardFlip() {
     return (
       <Flip right>
-        <div className="flex flex-col lg:flex-col  justify-center items-center self-center shadow-xl  w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-periwinkle text-black  ml-10">
-          <div className={"flex flex-col"} >
-            <form className="flex flex-row">
+        <div className="flex flex-col lg:flex-col  justify-center items-center self-center shadow-xl  w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-periwinkle text-black relative  ml-10">
+          <div className="flex flex-col relative" >
+            <form className="flex flex-row w-full relative">
               <input className="rounded-md w-full h-10 bg-seashell placeholder-black mr-4 pl-4" type="text" placeholder="Name" />
               <input className="rounded-md w-full h-10 bg-seashell placeholder-black mb-1 pl-4" type="email" placeholder="Email" />
             </form>
-            <form className="flex flex-col">
+            <form className="flex flex-col w-full relative">
               <input className="rounded-md h-10 bg-seashell placeholder-black  mb-1 pl-4" type="text" placeholder="Subject" />
               <textarea className="rounded-md h-36 bg-seashell  placeholder-black  mb-1 p-4 text-justify " type="text" placeholder="Message" />
               <input className="rounded-md h-10 w-2/4 bg-seashell placeholder-black self-end" type="submit" value="Send Message" />
@@ -103,8 +101,8 @@ export default function Home() {
 
   function NormalMenu() {
     return (
-      <ul className="flex flex-row text-lg" id="header">
-        <a href="#About" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b ">About</a>
+      <ul className="flex flex-row text-lg font-semibold text-grey" id="header">
+        <a href="#Services" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b ">Services</a>
         <a href="#Projects" className="pl-2 pr-2 mx-2  hover:text-white hover:border-b">Projects</a>
         <a href="#Contact" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b">Contact</a>
         <a href="" className="pl-2 pr-2 mx-2 hover:text-white hover:border-b">Blog</a>
@@ -127,9 +125,9 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
 
-      <main className={"flex flex-col z-50 bg-matteOrange"} >
+      <main className={"flex flex-col bg-black relative "} >
 
-        <section className="flex flex-row w-full h-14 justify-around items-center rel top-0 text-jet z-50 ">
+        <section className="flex flex-row w-full h-14 absolute justify-around items-center  top-0 text-grey z-20 ">
           <a href="">
             <p className="text-2xl" >RR</p>
           </a>
@@ -143,78 +141,71 @@ export default function Home() {
           }
 
         </section>
-        <section className="hidden sticky" id="myLinks">
-          <div className="flex flex-row justify-center bg-white w-screen h-screen  top-10 z-50 " >
-            <ul className="flex flex-col text-lg sm bg-matteOrange w-screen h-screen justify-center items-center" id="header">
-              <a href="#About" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-white" onClick={() => onBurgerMenuClick()} >About</a>
-              <a href="#Projects" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Projects</a>
-              <a href="#Contact" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Contact</a>
-              <a href="" className="pl-2 pr-2 mx-2 rounded-md w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Blog</a>
+        <section className="hidden" id="myLinks" >
+          <div className="flex flex-col justify-center bg-white w-screen h-screen fixed  z-50" >
+            <button className="absolute top-10 right-10" onClick={() => burgerMenu()}  >
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" /></svg>
+            </button>
+
+
+            <ul className="flex flex-col text-lg sm  w-screen h-screen justify-center items-center" id="header">
+              <a href="#About" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-grey" onClick={() => onBurgerMenuClick()} >Services</a>
+              <a href="#Projects" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Projects</a>
+              <a href="#Contact" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Contact</a>
+              <a href="" className="pl-2 pr-2 mx-2 rounded-md w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Blog</a>
             </ul>
           </div>
 
         </section>
 
-        <section className="flex flex-col w-full items-center justify-center self-center pb-10 h-screen text-jet" >
-         
-          <h1 className="group flex flex-col justify-center h-64  " >
-            <h4 className="block text-center font-thin text-2xl lg:text-4xl pb-10 transform translate-y-0 duration-500 group-hover:duration-500 group-hover:translate-y-10  group-hover:opacity-0 ">Hello! I'm</h4>
-            <Tada>
-              <p className="hidden text-7xl group-hover:flex">
-                A Software Engineer
-              </p>
-            </Tada>
-            <Tada>
-              <p className="flex text-7xl group-hover:hidden" >
-                Reister L. Ruedas
-              </p>
-            </Tada>
-          </h1>
-        </section>
-
-        <section className="flex flex-initial w-3/4 h-screen items-center self-center text-darkliver" id="About" >
-          <div className="flex flex-initial  flex-col lg:grid lg:grid-cols-2 lg:gap-5">
-            <Fade left cascade>
-              <p className="text-7xl text-left font-semibold  text-opacity-10" >ABOUT ME</p>
-            </Fade>
-            <Fade right>
-              <div className="hidden lg:flex row-span-3 justify-self-center " id="img-container"   >
-                <img src="/profileImage.jpg" alt={"Image"} className="rounded-md " ></img>
-              </div>
-            </Fade>
+        <section className="flex flex-row w-full h-screen items-center justify-center pb-10" >
+          <div className="flex flex-col w-.40 h-screen justify-center items-center ">
+            <div>
+              <Fade top cascade>
+                <p className="lg:text-lg lg:p-2 text-grey ">Hello! I'm</p>
+                <span className="lg:text-9xl font-light  " id="name" >reister</span><span className="lg:text-9xl font-extrabold text-peach">. </span><span className="text-sm text-grey" >A Software Engineer </span>
+              </Fade>
+            </div>
             <Fade left >
-
-              <p className="text-justify flex flex-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              <div className="flex" >
-                <a href="https://www.linkedin.com/in/reisterruedas/" className="fa fa-linkedin mr-5 hover:opacity-50"></a>
-                <a href="https://www.facebook.com/reister.ruedas1/" className="fa fa-facebook mr-5 hover:opacity-50"></a>
-                <a href="https://www.instagram.com/rlruedas/" className="fa fa-instagram mr-5 hover:opacity-50"></a>
-                <a href="https://github.com/rlruedas" className="fa fa-github hover:opacity-50"></a>
-              </div>
+              <span className="text-right text-xs lg:text-lg font-bold self-end py-5 text-grey"><span className="lg:text-xs font-light text-pink" >ABOUT</span>&nbsp; &nbsp; I'm a Full-stack Engineer based in the Philippines. Specializes in building web and mobile applications.
+                Currently improving my artistic and aesthetic skill to provide BEAUTIFUL and FRIENDLY applications for my users. I also do freelance, want to collaborate?</span>
             </Fade>
+          </div>
+          <div className="flex w-.30 h-screen justify-center items-center">
+            <img src="./profileImage.png" alt="Image was here"  ></img>
+
+
+
           </div>
         </section>
 
-        <section className="flex flex-col w-screen h-screen item-center self-center my-20" >
+
+
+        <section className="flex flex-col w-screen h-screen item-center self-center my-20" id="Services">
           <div className="flex flex-col  items-center justify-center relative ">
             <Services />
           </div>
         </section>
 
-        <section className="flex flex-col w-full h-full items-center justify-center self-center text-black " id="Projects">
+        <section className="flex flex-col w-full h-full items-center justify-center self-center my-20 text-black " id="Projects">
           <Projects />
         </section>
 
-        <section className="flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center  " id="Contact" >
-          <div className="flex flex-col">
-            <div className="text-4xl lg:text-7xl font-semibold pb-6 text-darkliver  " >
+        <section>
+          <Techstack />
+        </section>
+
+        <section className="group flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center relative " id="Contact" >
+          <div className="flex flex-col relative">
+            <div className="text-4xl lg:text-7xl font-semibold text-grey  " >
               <Zoom cascade>
-                <p>CONTACT ME</p>
+                <p>Get in touch!</p>
               </Zoom>
             </div>
-
+            <p className="text-grey pb-2">here's my business card. </p>
+          </div>
+          <div>
+            <img src="./hmu.png" alt="Image was here" className="absolute right-48 -top-10 w-64 h-64 opacity-0 transform translate-y-72 hidden lg:block duration-200 group-hover:opacity-100 group-hover:translate-y-0"></img>
           </div>
           {
             flipCard ? <BusinessCardFlip /> : <BusinessCard />

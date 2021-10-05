@@ -19,6 +19,28 @@ a {
 * {
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: hidden;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgb(88, 75, 83);
+}
+
+#name {
+    -webkit-text-fill-color: #111;
+    -webkit-text-stroke: 1px #777;
+    z-index: 0;
+}
+
+
 /* 
 .fa-linkedin {
     padding: 15px;

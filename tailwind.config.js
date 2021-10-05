@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'black': '#000000',
+        'black': '#111',
         'transparent': '#FF000000',
         'matteBlack': '#1B1B1B',
         'white': '#ffffff',
@@ -25,9 +25,12 @@ module.exports = {
         'rebeccapurple': '#662c91',
         'persiangreen': '#17a398',
         'jet': '#33312e',
+        'grey' : '#777',
+        'pink' : '#FF1E56',
+        'peach' : '#FFAC41'
       },
       textColor: {
-        'black': '#000000',
+        'black': '#111',
         'matteBlack': '#1B1B1B',
         'white': '#ffffff',
         'danger': '#e3342f',
@@ -46,11 +49,28 @@ module.exports = {
         'darksalmon': '#f38d68',
         'rebeccapurple': '#662c91',
         'persiangreen': '#17a398',
-        'jet': '#33312e'
+        'jet': '#33312e',
+        'grey' : '#777',
+        'pink' : '#FF1E56',
+        'peach' : '#FFAC41'
 
 
       },
       width: {
+        '.10': '10%',
+        '.20': '20%',
+        '.30': '30%',
+        '.40': '40%',
+        '.45': '45%',
+        '.50': '50%',
+        '.55': '55%',
+        '.60': '60%',
+        '.70': '70%',
+        '.80': '80%',
+        '.90': '90%',
+        '.100': '100%',
+      },
+      height: {
         '.10': '10%',
         '.20': '20%',
         '.30': '30%',
@@ -76,6 +96,10 @@ module.exports = {
         '.9': '90%',
         '.10': '100%',
       },
+      inset: {
+        '.35': '35%',
+        '.40': '40%',
+      }
 
 
     },
@@ -101,6 +125,8 @@ module.exports = {
       translate: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
       animation: ['hover', 'focus', 'group-hover'],
       display: ['hover', , 'focus', 'group-hover'],
+      fontSize: ['hover', 'focus'],
+      position: ['hover', 'focus'],
 
     },
   },

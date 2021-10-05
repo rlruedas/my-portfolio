@@ -39,11 +39,15 @@ export default function projects() {
     ]
 
     return (
-        <div className="flex flex-col w-.80 items-center bg-persiangreen rounded-md shadow-2xl" >
-            <Zoom>
-                <p className="text-2xl lg:text-5xl font-semibold my-10 text-rebeccapurple " >My Works</p>
-            </Zoom>
-            <h1 className="text-black text-5xl justify-self-center" >In Development</h1>
+        <div className="flex flex-col w-full relative items-center rounded-md " >
+            <div className="flex flex-col relative justify-center items-center ">
+                <Zoom>
+                    <p className="text-2xl lg:text-5xl font-semibold my-10 text-grey" >My Works</p>
+                </Zoom>
+                <img src='./work.png' alt="Image was here" className="  absolute -right-40 -top-12 w-40 h-40 transform rotate-12"></img>
+            </div>
+
+            <h1 className="text-grey text-5xl justify-self-center" >In Development</h1>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full justify-center items-end px-9 pb-9" >
 
                 {/* <Fade left>
