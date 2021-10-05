@@ -30,7 +30,7 @@ function techstack() {
     return (
         <div className="flex w-screen h-screen  relative "  >
             <div className=" flex flex-col w-full h-screen justify-center items-center m-0 p-0 relative">
-                <Zoom left >
+                <Zoom left>
                     <div className="flex flex-col absolute left-80 top-36 items-center" id="label" speed="-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

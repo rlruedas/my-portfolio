@@ -5,7 +5,7 @@ import Slide from 'react-reveal/Slide';
 
 export default function services() {
     return (
-        <div className="flex flex-row justify-start items-center  w-screen h-screen relative overflow-hidden" >
+        <div className="flex flex-row justify-start items-center  w-screen h-screen relative " >
             <div className="flex flex-row relative w-screen h-screen">
                 <div className="group flex flex-col justify-center items-center w-full h-screen relative" >
                     <i className="im im-mobile text-xl lg:text-9xl text-peach" />
