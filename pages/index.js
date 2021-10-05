@@ -129,7 +129,7 @@ export default function Home() {
 
       <main className={"flex flex-col z-50 bg-matteOrange"} >
 
-        <section className="flex flex-row w-full h-14 justify-around items-center absolute top-0 text-jet z-50 ">
+        <section className="flex flex-row w-full h-14 justify-around items-center rel top-0 text-jet z-50 ">
           <a href="">
             <p className="text-2xl" >RR</p>
           </a>
@@ -143,8 +143,8 @@ export default function Home() {
           }
 
         </section>
-        <section className="hidden" id="myLinks">
-          <div className="flex flex-row justify-center bg-white w-screen h-screen absolute top-10 z-50" >
+        <section className="hidden sticky" id="myLinks">
+          <div className="flex flex-row justify-center bg-white w-screen h-screen  top-10 z-50 " >
             <ul className="flex flex-col text-lg sm bg-matteOrange w-screen h-screen justify-center items-center" id="header">
               <a href="#About" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-white" onClick={() => onBurgerMenuClick()} >About</a>
               <a href="#Projects" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-white" onClick={() => onBurgerMenuClick()}>Projects</a>
@@ -157,8 +157,8 @@ export default function Home() {
 
         <section className="flex flex-col w-full items-center justify-center self-center pb-10 h-screen text-jet" >
          
-          <h1 className="group flex flex-col text-center " >
-            <h4 className="block text-center font-thin text-2xl lg:text-4xl pb-10 group-hover:hidden ">Hello! I'm</h4>
+          <h1 className="group flex flex-col justify-center h-64  " >
+            <h4 className="block text-center font-thin text-2xl lg:text-4xl pb-10 transform translate-y-0 duration-500 group-hover:duration-500 group-hover:translate-y-10  group-hover:opacity-0 ">Hello! I'm</h4>
             <Tada>
               <p className="hidden text-7xl group-hover:flex">
                 A Software Engineer
