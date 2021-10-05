@@ -196,7 +196,7 @@ export default function Home() {
         </section>
 
         <section className="group flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center relative " id="Contact" >
-          <div className="flex flex-col relative">
+          <div className="flex flex-col items-center relative ">
             <div className="text-4xl lg:text-7xl font-semibold text-grey  " >
               <Zoom cascade>
                 <p>Get in touch!</p>
