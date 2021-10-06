@@ -44,7 +44,7 @@ export default function projects() {
                 <Zoom>
                     <p className="text-2xl lg:text-5xl font-semibold my-10 text-grey" >My Works</p>
                 </Zoom>
-                <img src='./work.png' alt="Image was here" className="  absolute -right-40 -top-12 w-40 h-40 transform rotate-12"></img>
+                <img src='./work.png' alt="Image was here" className="  absolute -right-40 -top-12 transform rotate-12" width="160px" height="160px"></img>
             </div>
 
             <h1 className="text-grey text-5xl justify-self-center" >In Development</h1>

@@ -55,7 +55,7 @@ export default function Home() {
   function BusinessCard() {
     return (
       <Flip right>
-        <div className="flex flex-col lg:flex-col  justify-center items-center self-center p-2 shadow-xl w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-periwinkle text-black ml-10">
+        <div className="flex flex-col lg:flex-col  justify-center items-center self-center p-2 shadow-xl w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-peach text-black lg:m-10">
           <div className="flex flex-row justify-around w-full items-center" >
             <img src="/logo-nobg.png" alt={"Image"} className="hidden lg:flex rounded-lg w-64 h-64 " ></img>
             <div className="w-px h-64 bg-black hidden lg:flex" ></div>
@@ -90,7 +90,7 @@ export default function Home() {
   function BusinessCardFlip() {
     return (
       <Flip right>
-        <div className="flex flex-col lg:flex-col  justify-center items-center self-center shadow-xl  w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-periwinkle text-black relative  ml-10">
+        <div className="flex flex-col lg:flex-col  justify-center items-center self-center shadow-xl  w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-peach text-black relative lg:m-10">
           <div className="flex flex-col relative" >
             <form className="flex flex-row w-full relative">
               <input className="rounded-md w-full h-10 bg-seashell placeholder-black mr-4 pl-4" type="text" placeholder="Name" />
@@ -207,7 +207,7 @@ export default function Home() {
         </section>
 
         <section className="group flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center relative " id="Contact" >
-          <div className="flex flex-col items-center relative ">
+          <div className="flex flex-col justify-center items-center relative ">
             <div className="text-4xl lg:text-7xl font-semibold text-grey  " >
               <Zoom cascade>
                 <p>Get in touch!</p>
