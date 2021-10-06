@@ -3,7 +3,7 @@ import Flip from 'react-reveal/Flip'
 
 
 function businesscard() {
-    const [flipCard, setFlipCard] = useState(false);
+    const [flipCard, setFlipCard] = useState(true);
 
     useEffect(() => {
 
