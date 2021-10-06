@@ -44,11 +44,11 @@ export default function projects() {
                 <Zoom>
                     <p className="text-2xl lg:text-5xl font-semibold py-10 text-grey" >My Works</p>
                 </Zoom>
-                <img src='./work.png' alt="Image was here" className="  absolute -right-40 -top-10 transform rotate-12" width="160px" height="160px"></img>
+                <img src='./work.png' alt="Image was here" className="  absolute -right-28 lg:-right-40 lg:-top-3 transform rotate-12" width="160px" height="160px"></img>
             </div>
 
             {/* <h1 className="text-grey text-5xl justify-self-center" >In Development</h1> */}
-            <div className="grid lg:grid-cols-3 lg:grid-rows-4 gap-8 l w-.70 justify-center items-center " >
+            <div className="grid lg:grid-cols-3 lg:grid-rows-4 gap-8 l w-.70 justify-center items-center pt-10" >
 
                 <div className="flex flex-col w-full h-96 justify-end items-center border-2 border-solid border-peach group hover:bg-seashell hover:border-0" >
                     <div className="flex flex-1 w-full relative p-6 justify-end">
