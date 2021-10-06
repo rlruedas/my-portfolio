@@ -20,25 +20,36 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
+    window.addEventListener("load", updateDimensions);
 
     if (width >= 1280) {
       document.getElementById("myLinks").className = "hidden";
     }
 
     return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  }, [width]);
 
   function burgerMenu() {
     var x = document.getElementById("myLinks").className;
+    var main = document.getElementById("mainBody").classList;
+
     if (x === "block") {
+      console.log("dito pumasok")
       document.getElementById("myLinks").className = "hidden";
+      document.getElementById("mainBody").classList.remove("fixed");
     } else {
       document.getElementById("myLinks").className = "block";
+      document.getElementById("mainBody").classList.add("fixed");
     }
+
+
+
+
   }
 
   function onBurgerMenuClick() {
     document.getElementById("myLinks").className = "hidden";
+    document.getElementById("mainBody").classList.remove("fixed");
   }
 
   function BusinessCard() {
@@ -112,7 +123,7 @@ export default function Home() {
 
 
   return (
-    <div className={"flex flex-1 flex-col font-body content-center antialiased items-center overflow-hidden"}   >
+    <div className="flex flex-1 flex-col font-body content-center antialiased items-center overflow-hidden" id="mainBody" >
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Reister L. Ruedas</title>
@@ -142,14 +153,14 @@ export default function Home() {
 
         </section>
         <section className="hidden" id="myLinks" >
-          <div className="flex flex-col justify-center bg-white w-screen h-screen fixed  z-50" >
+          <div className="flex flex-col justify-center bg-white w-screen h-screen fixed  z-50 " >
             <button className="absolute top-10 right-10" onClick={() => burgerMenu()}  >
               <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" /></svg>
             </button>
 
 
             <ul className="flex flex-col text-lg sm  w-screen h-screen justify-center items-center" id="header">
-              <a href="#About" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-grey" onClick={() => onBurgerMenuClick()} >Services</a>
+              <a href="#Services" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl  hover:text-grey" onClick={() => onBurgerMenuClick()} >Services</a>
               <a href="#Projects" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Projects</a>
               <a href="#Contact" className="pl-2 pr-2 mx-2 w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Contact</a>
               <a href="" className="pl-2 pr-2 mx-2 rounded-md w-screen text-center text-7xl hover:text-grey" onClick={() => onBurgerMenuClick()}>Blog</a>
