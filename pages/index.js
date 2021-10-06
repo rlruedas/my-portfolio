@@ -6,12 +6,12 @@ import Zoom from 'react-reveal/Zoom'
 import Projects from '../pages/public/projects'
 import Services from '../pages/public/services'
 import Techstack from '../pages/public/techstack'
+import BusinessCard from '../pages/public/businesscard'
 
 export default function Home() {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   const [burgerMenuClick, setBurgerMenuClick] = useState(false);
-  const [flipCard, setFlipCard] = useState(false);
 
   const updateDimensions = () => {
     setWidth(window.innerWidth);
@@ -52,63 +52,6 @@ export default function Home() {
     document.getElementById("mainBody").classList.remove("fixed");
   }
 
-  function BusinessCard() {
-    return (
-      <Flip right>
-        <div className="flex flex-col lg:flex-col  justify-center items-center self-center p-2 shadow-xl w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-peach text-black lg:m-10">
-          <div className="flex flex-row justify-around w-full items-center" >
-            <img src="/logo-nobg.png" alt={"Image"} className="hidden lg:flex rounded-lg w-64 h-64 " ></img>
-            <div className="w-px h-64 bg-black hidden lg:flex" ></div>
-            <div className="flex flex-col " >
-              <div className="pb-1" >
-                <p className="pb-1"><i className="fa fa-map-marker" ></i></p>
-                <p>Antipolo City, Rizal, 1870</p>
-              </div>
-              <div className="pb-1" >
-                <p className="pb-1"><i className="fa fa-envelope"></i></p>
-                <p className="">reister.ruedas@gmail.com</p>
-                <p>rlruedas@student.apc.edu.ph</p>
-              </div>
-              <div className="" >
-                <p className="pb-1"><i className="fa fa-phone"></i></p>
-                <p>+639493241618</p>
-              </div>
-              <div className="" >
-                <p className="pb-1"><i className="fa fa-file-text"></i></p>
-                <a href="./Resume-Reister-Ruedas.pdf" className="rounded-md bg-transparent placeholder-gray-700 self-end hover:opacity-50" download >Download Resume</a>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col w-full">
-            <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 self-end mr-10 fa fa-angle-right text-black" onClick={() => setFlipCard(true)} />
-          </div>
-        </div>
-      </Flip>
-    )
-  }
-
-  function BusinessCardFlip() {
-    return (
-      <Flip right>
-        <div className="flex flex-col lg:flex-col  justify-center items-center self-center shadow-xl  w-.70 lg:w-.50 lg:h-96 rounded-2xl bg-peach text-black relative lg:m-10">
-          <div className="flex flex-col relative" >
-            <form className="flex flex-row w-full relative">
-              <input className="rounded-md w-full h-10 bg-seashell placeholder-black mr-4 pl-4" type="text" placeholder="Name" />
-              <input className="rounded-md w-full h-10 bg-seashell placeholder-black mb-1 pl-4" type="email" placeholder="Email" />
-            </form>
-            <form className="flex flex-col w-full relative">
-              <input className="rounded-md h-10 bg-seashell placeholder-black  mb-1 pl-4" type="text" placeholder="Subject" />
-              <textarea className="rounded-md h-36 bg-seashell  placeholder-black  mb-1 p-4 text-justify " type="text" placeholder="Message" />
-              <input className="rounded-md h-10 w-2/4 bg-seashell placeholder-black self-end" type="submit" value="Send Message" />
-            </form>
-          </div>
-          <div className="flex flex-col w-full">
-            <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 self-end mr-10 fa fa-angle-right text-black" onClick={() => setFlipCard(false)} />
-          </div>
-        </div>
-      </Flip>
-    )
-  }
 
   function NormalMenu() {
     return (
@@ -136,9 +79,10 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
 
-      <main className={"flex flex-col bg-black relative "} >
+      <main className="flex flex-col bg-black relative m-0 p-0">
 
-        <section className="flex flex-row w-full h-14 absolute justify-around items-center  top-0 text-grey z-20 ">
+
+        <section className="flex flex-row w-full py-10 absolute justify-around items-center  top-0 text-grey z-20 ">
           <a href="">
             <p className="text-2xl" >RR</p>
           </a>
@@ -206,21 +150,17 @@ export default function Home() {
           <Techstack />
         </section>
 
-        <section className="group flex flex-col lg:flex-row w-.90 h-screen items-center self-center justify-center relative " id="Contact" >
-          <div className="flex flex-col justify-center items-center relative ">
-            <div className="text-4xl lg:text-7xl font-semibold text-grey  " >
+        <section className="group flex flex-col lg:flex-row w-full md:h-screen items-center justify-center relative " id="Contact" >
+          <div className="flex flex-col justify-center items-center relative">
+            <div className="text-4xl lg:text-7xl font-semibold text-grey" >
               <Zoom cascade>
                 <p>Get in touch!</p>
               </Zoom>
             </div>
             <p className="text-grey pb-2">here's my business card. </p>
           </div>
-          <div>
-            <img src="./hmu.png" alt="Image was here" className="absolute right-48 -top-10 w-64 h-64 opacity-0 transform translate-y-72 hidden lg:block duration-200 group-hover:opacity-100 group-hover:translate-y-0"></img>
-          </div>
-          {
-            flipCard ? <BusinessCardFlip /> : <BusinessCard />
-          }
+
+          <BusinessCard />
         </section>
 
       </main>

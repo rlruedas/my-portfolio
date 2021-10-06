@@ -157,7 +157,7 @@ function techstack() {
                     </div>
                 </Zoom>
 
-                <span className="text-6xl relative text-pink" >
+                <span className="text-xl duration-500 lg:text-6xl relative text-pink" >
                     Tools <span className="text-grey">and</span> <span className="text-peach">Techs</span>
                 </span>
                 <p className="text-xl relative text-grey" >

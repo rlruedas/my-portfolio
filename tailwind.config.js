@@ -25,9 +25,9 @@ module.exports = {
         'rebeccapurple': '#662c91',
         'persiangreen': '#17a398',
         'jet': '#33312e',
-        'grey' : '#777',
-        'pink' : '#FF1E56',
-        'peach' : '#FFAC41'
+        'grey': '#777',
+        'pink': '#FF1E56',
+        'peach': '#FFAC41'
       },
       textColor: {
         'black': '#111',
@@ -50,11 +50,15 @@ module.exports = {
         'rebeccapurple': '#662c91',
         'persiangreen': '#17a398',
         'jet': '#33312e',
-        'grey' : '#777',
-        'pink' : '#FF1E56',
-        'peach' : '#FFAC41'
+        'grey': '#777',
+        'pink': '#FF1E56',
+        'peach': '#FFAC41'
 
 
+      },
+      borderColor: {
+        'pink': '#FF1E56',
+        'peach': '#FFAC41'
       },
       width: {
         '.10': '10%',
