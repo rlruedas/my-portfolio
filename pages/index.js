@@ -179,7 +179,7 @@ export default function Home() {
             </div>
             <Fade left >
               <span className="text-right text-xs lg:text-lg font-bold self-end py-5 text-grey"><span className="lg:text-xs font-light text-pink" >ABOUT</span>&nbsp; &nbsp; I'm a Full-stack Engineer based in the Philippines. Specializes in building web and mobile applications.
-                Currently improving my artistic and aesthetic skill to provide BEAUTIFUL and FRIENDLY applications for my users. I also do freelance, want to collaborate?</span>
+                Currently improving my artistic and aesthetic skill to provide BEAUTIFUL and FRIENDLY applications. I also do freelance, want to collaborate?</span>
             </Fade>
           </div>
           <div className="flex w-.30 h-screen justify-center items-center">
