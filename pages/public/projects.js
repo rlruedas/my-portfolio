@@ -33,9 +33,9 @@ export default function projects() {
                     </button>
                     <div className="flex flex-row relative w-.60 h-.70 ">
                         <div className="flex flex-col flex-1 h-full justify-center items-start ">
-                            <p className="text-6xl" >{projectsDetails[projectCount].projectName}</p>
-                            <p className="text-lg py-10" >{projectsDetails[projectCount].projectDesc}</p>
-                            <p className="text-lg" >{projectsDetails[projectCount].projectAvailable}</p>
+                            <p className="text-xl lg:text-6xl" >{projectsDetails[projectCount].projectName}</p>
+                            <p className="text-sm lg:text-lg py-10" >{projectsDetails[projectCount].projectDesc}</p>
+                            <p className="text-sm lg:text-lg" >{projectsDetails[projectCount].projectAvailable}</p>
                         </div>
                         <div className="hidden flex-1 justify-center items-center lg:flex">
                             <img src={projectsDetails[projectCount].projectImg} alt="Image was here" ></img>
