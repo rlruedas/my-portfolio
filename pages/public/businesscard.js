@@ -12,11 +12,11 @@ function businesscard() {
     return (
         <div className="flex flex-col relative w-.70 max-w-2xl  m-10">
             <div>
-                <img src="./hmu.png" alt="Image was here" className="absolute -top-64 right-0 w-64 h-64 z-0 opacity-0 hidden transform translate-y-72 duration-150 md:flex group-hover:opacity-100 group-hover:translate-y-0"></img>
+                <img src="./hmu.png" alt="Image was here" className="absolute -top-64 right-0 w-64 h-64 z-0 opacity-0 hidden transform translate-y-72 duration-150 lg:flex group-hover:opacity-100 group-hover:translate-y-0"></img>
             </div>
             {
                 flipCard ?
-                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-96  rounded-2xl bg-peach text-black">
+                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-peach text-black">
                         <div className="flex flex-row justify-around w-full items-center " >
                             <img src="/logo-nobg.png" alt={"Image"} className="hidden lg:flex rounded-lg w-64 h-64 " ></img>
                             <div className="w-px md:h-64 bg-black hidden lg:flex" ></div>
@@ -46,7 +46,7 @@ function businesscard() {
                     </div>
                     :
 
-                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-96  rounded-2xl bg-peach text-black">
+                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-peach text-black">
                         <div className="flex flex-col" >
                             <div className="flex flex-row justify-between items-start">
                                 <input className="rounded-md w-.45 py-2 px-2 bg-seashell placeholder-black " type="text" placeholder="Name" />
