@@ -13,7 +13,7 @@ export default function services() {
                     </Zoom>
                     <div className="flex flex-col justify-center items-center bg-pink w-full h-screen absolute transform -translate-x-full duration-1000 group-hover:ease-in-out group-hover:translate-x-0 group-hover:duration-1000" >
                         <p className="text-base lg:text-3xl font-bold text-white" >Native Application Development</p>
-                        <p className="text-base lg:text-base font-bold text-white py-10" >let's make with a mobile application?</p>
+                        <p className="text-base lg:text-base font-bold text-white py-10" >let's make it with a mobile application?</p>
                     </div>
                     <img src="./lookright.png" alt="Image was here" className=" absolute left-0 top-0 w-52 h-52 opacity-0 duration-300 group-hover:opacity-100" ></img>
 
