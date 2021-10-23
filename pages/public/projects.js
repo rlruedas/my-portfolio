@@ -16,10 +16,10 @@ export default function projects() {
             projectAvailable: "Coming Soon on Google Play"
         },
         {
-            projectName: "asdasdas",
-            projectDesc: "asdasdasd",
-            projectImg: "asdasdasd",
-            projectAvailable: "Coming Soon "
+            projectName: "Coming Soon",
+            projectDesc: "Coming Soon",
+            projectImg: "Coming Soon",
+            projectAvailable: "Coming Soon"
         },
     ]
 
