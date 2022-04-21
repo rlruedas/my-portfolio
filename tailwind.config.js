@@ -1,64 +1,28 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.{html,js,jsx,tsx,ts}',
+    './styles/*.{css}'
+  ],
   theme: {
     extend: {
       backgroundColor: {
-        'black': '#111',
-        'transparent': '#FF000000',
-        'matteBlack': '#1B1B1B',
-        'white': '#ffffff',
-        'dirty-white': '#edebe4',
-        'mattePurple': '#392A48',
-        'matteBlue': '#7AAEC4',
-        'matteGreen': '#48A14D',
-        'matteYellow': '#EDD94C',
-        'matteOrange': '#ED944D',
-        'matteRed': '#B33F40',
-        'copperRose': '#9d5c63',
-        'darkliver': '#584b53',
-        'dessertsand': '#e4bb97',
-        'seashell': '#fef5ef',
-        'periwinkle': '#d6e3f8',
-        'burntsienna': '#ee6c4d',
-        'darksalmon': '#f38d68',
-        'rebeccapurple': '#662c91',
-        'persiangreen': '#17a398',
-        'jet': '#33312e',
-        'grey': '#777',
-        'pink': '#FF1E56',
-        'peach': '#FFAC41'
+        'newmaroon': '#8E3200',
+        'newbrown': '#A64B2A',
+        'newbeige': '#D7A86E',
+        'newwhite': '#FFEBC1',
       },
       textColor: {
-        'black': '#111',
-        'matteBlack': '#1B1B1B',
-        'white': '#ffffff',
-        'danger': '#e3342f',
-        'mattePurple': '#392A48',
-        'matteBlue': '#7AAEC4',
-        'matteGreen': '#48A14D',
-        'matteYellow': '#EDD94C',
-        'matteOrange': '#ED944D',
-        'matteRed': '#B33F40',
-        'copperRose': '#9d5c63',
-        'darkliver': '#584b53',
-        'dessertsand': '#e4bb97',
-        'seashell': '#fef5ef',
-        'periwinkle': '#d6e3f8',
-        'burntsienna': '#ee6c4d',
-        'darksalmon': '#f38d68',
-        'rebeccapurple': '#662c91',
-        'persiangreen': '#17a398',
-        'jet': '#33312e',
-        'grey': '#777',
-        'pink': '#FF1E56',
-        'peach': '#FFAC41'
-
+        'newmaroon': '#8E3200',
+        'newbrown': '#A64B2A',
+        'newbeige': '#D7A86E',
+        'newwhite': '#FFEBC1',
 
       },
       borderColor: {
-        'pink': '#FF1E56',
-        'peach': '#FFAC41'
+        'newmaroon': '#8E3200',
+        'newbrown': '#A64B2A',
+        'newbeige': '#D7A86E',
+        'newwhite': '#FFEBC1',
       },
       width: {
         '.10': '10%',

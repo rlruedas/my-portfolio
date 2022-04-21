@@ -10,13 +10,14 @@ function businesscard() {
     }, [])
 
     return (
+
         <div className="flex flex-col relative w-.70 max-w-2xl  m-10">
             <div>
                 <img src="./hmu.png" alt="Image was here" className="absolute -top-64 right-0 w-64 h-64 z-0 opacity-0 hidden transform translate-y-72 duration-150 lg:flex group-hover:opacity-100 group-hover:translate-y-0"></img>
             </div>
             {
                 flipCard ?
-                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-peach text-black">
+                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-newbeige text-black">
                         <div className="flex flex-row justify-around w-full items-center " >
                             <img src="/logo-nobg.png" alt={"Image"} className="hidden lg:flex rounded-lg w-64 h-64 " ></img>
                             <div className="w-px md:h-64 bg-black hidden lg:flex" ></div>
@@ -45,27 +46,25 @@ function businesscard() {
                         </div>
                     </div>
                     :
-
-                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-peach text-black">
-                        <div className="flex flex-col" >
-                            <div className="flex flex-row justify-between items-start">
-                                <input className="rounded-md w-.45 py-2 px-2 bg-seashell placeholder-black " type="text" placeholder="Name" />
-                                <input className="rounded-md w-.45 py-2 px-2 bg-seashell placeholder-black " type="email" placeholder="Email" />
+                    <Flip right>
+                        <div className="flex flex-row relative lg:flex-row z-10 justify-center items-center  w-full  h-.80 md:h-96  rounded-2xl bg-newbeige text-black">
+                            <div className="flex flex-col relative w-[85%] ml-[3em]" >
+                                <div className="flex flex-col justify-evenly items-center relative ">
+                                    <input className="rounded-[3px] w-full px-2 py-2 bg-newwhite placeholder-black " type="text" placeholder="Name" />
+                                    <input className="rounded-[3px] w-full m-1 px-2 py-2 bg-newwhite placeholder-black " type="email" placeholder="Email" />
+                                    <input className="rounded-[3px]  w-full px-2 py-2 m-1 bg-newwhite placeholder-black " type="text" value="Subject" />
+                                    <textarea className="rounded-[3px] w-full h-[180px] m-1 py-2 px-2 bg-newwhite  placeholder-black  text-justify " type="text" placeholder="Message" />
+                                    <input className="rounded-[3px] p-1 bg-newwhite border-2 placeholder-black self-end" type="submit" value="Send Message" />
+                                </div>
                             </div>
-                            <div className="flex flex-col justify-center items-center relative ">
-                                <input className="rounded-md  w-full px-2 py-2 m-1 bg-seashell placeholder-black " type="text" value="Subject" />
-                                <textarea className="rounded-md w-full m-1 py-7 px-2 bg-seashell  placeholder-black  text-justify " type="text" placeholder="Message" />
-                                <input className="rounded-md p-1 bg-seashell placeholder-black self-end" type="submit" value="Send Message" />
+                            <div className="flex flex-row w-[10%] m-2 relative items-center justify-center ">
+                                <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black" onClick={() => setFlipCard(true)} />
                             </div>
                         </div>
-                        <div className="flex flex-col w-full">
-                            <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 self-end mr-10 fa fa-angle-right text-black" onClick={() => setFlipCard(true)} />
-                        </div>
-
-                    </div>
+                    </Flip>
             }
 
-        </div>
+        </div >
 
 
 
