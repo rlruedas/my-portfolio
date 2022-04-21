@@ -85,19 +85,19 @@ export default function Home() {
           className="flex flex-row self-center text-lg font-semibold text-newbrown mr-[5em] "
           id="header"
         >
-          <a href="" className="pr-2 mx-2  hover:text-newmaroon  ">
+          <a href="" className="pr-5  hover:text-newmaroon  ">
             About
           </a>
-          <a href="#Services" className="pl-2 pr-2 mx-2 hover:text-newmaroon ">
+          <a href="#Services" className="px-5 hover:text-newmaroon ">
             Services
           </a>
-          <a href="#Projects" className="pl-2 pr-2 mx-2  hover:text-newmaroon">
+          <a href="#Projects" className="px-5  hover:text-newmaroon">
             Projects
           </a>
-          <a href="#Contact" className="pl-2 pr-2 mx-2 hover:text-newmaroon">
+          <a href="#Contact" className="px-5 hover:text-newmaroon">
             Contact
           </a>
-          <a href="" className="pl-2 hover:text-newmaroon ">
+          <a href="" className="pl-5 hover:text-newmaroon ">
             Blog
           </a>
         </ul>
