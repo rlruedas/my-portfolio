@@ -62,30 +62,30 @@ export default function Home() {
     }
   }
 
-  function disable() {
-    // To get the scroll position of current webpage
-    let TopScroll = window.pageYOffset || document.documentElement.scrollTop;
-    let LeftScroll = window.pageXOffset || document.documentElement.scrollLeft;
+  // function disable() {
+  //   // To get the scroll position of current webpage
+  //   let TopScroll = window.pageYOffset || document.documentElement.scrollTop;
+  //   let LeftScroll = window.pageXOffset || document.documentElement.scrollLeft;
 
-    // if scroll happens, set it to the previous value
-    window.onscroll = function () {
-      window.scrollTo(LeftScroll, TopScroll);
-    };
-  }
+  //   // if scroll happens, set it to the previous value
+  //   window.onscroll = function () {
+  //     window.scrollTo(LeftScroll, TopScroll);
+  //   };
+  // }
 
 
-  function enable() {
-    window.onscroll = function () { };
-  }
+  // function enable() {
+  //   window.onscroll = function () { };
+  // }
 
   function NormalMenu() {
     return (
-      <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center items-center">
         <ul
           className="flex flex-row self-center text-lg font-semibold text-newbrown mr-[5em] "
           id="header"
         >
-          <a href="" className="pl-2 pr-2 mx-2  hover:text-newmaroon  ">
+          <a href="" className="pr-2 mx-2  hover:text-newmaroon  ">
             About
           </a>
           <a href="#Services" className="pl-2 pr-2 mx-2 hover:text-newmaroon ">
@@ -97,7 +97,7 @@ export default function Home() {
           <a href="#Contact" className="pl-2 pr-2 mx-2 hover:text-newmaroon">
             Contact
           </a>
-          <a href="" className="pl-2 pr-2 mx-2 hover:text-newmaroon ">
+          <a href="" className="pl-2 hover:text-newmaroon ">
             Blog
           </a>
         </ul>
