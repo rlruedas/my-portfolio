@@ -17,7 +17,7 @@ function businesscard() {
             </div>
             {
                 flipCard ?
-                    <div className="flex flex-col flex-grow-0 lg:flex-col z-10 justify-center items-center self-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-newbeige text-black">
+                    <div className="flex flex-row lg:flex-row z-10 justify-center items-center p-2 w-full max-w-2xl h-.80 md:h-96  rounded-2xl bg-newbeige text-black">
                         <div className="flex flex-row justify-around w-full items-center " >
                             <img src="/logo-nobg.png" alt={"Image"} className="hidden lg:flex rounded-lg w-64 h-64 " ></img>
                             <div className="w-px md:h-64 bg-black hidden lg:flex" ></div>
@@ -41,8 +41,8 @@ function businesscard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col w-full">
-                            <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 self-end mr-10 fa fa-angle-right text-black" onClick={() => setFlipCard(false)} />
+                        <div className="flex w-max justify-end ">
+                            <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 self-end fa fa-angle-right text-black" onClick={() => setFlipCard(false)} />
                         </div>
                     </div>
                     :

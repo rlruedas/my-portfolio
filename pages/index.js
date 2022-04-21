@@ -217,23 +217,9 @@ export default function Home() {
         <main className=" font-body antialiased items-center block overflow-x-hidden">
           <section className="flex flex-row w-full h-screen items-center justify-center pb-10">
             <div className="flex flex-col w-.40 h-screen justify-center items-center ">
-              <div>
+              <div  >
                 <Fade top cascade>
-                  <p className="text-[35px] lg:p-2 text-newbrown ">
-                    Hi!{" "}
-                    <span className="text-lg lg:text-lg lg:p-2 text-grey">
-                      I'm
-                    </span>{" "}
-                  </p>
-                  <span className="lg:text-[80px] font-light text-newmaroon " id="name">
-                    Reister
-                  </span>
-                  <span className="lg:text-9xl font-extrabold text-peach">
-                    .{" "}
-                  </span>
-                  <span className="text-sm text-grey">
-                    A Software Engineer{" "}
-                  </span>
+                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbrown text-left transition-all duration-500" >Hi <span className="text-[14px] lg:text-[20px] text-black">I'm</span> <br /><span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500">Reister</span> <span className="text-[60px] font-extrabold text-black">.</span> <br /> <span className="text-[15px] lg:text-[30px] text-black transition-all duration-500">A Software Engineer</span> </span>
                 </Fade>
               </div>
               <Fade left>

@@ -9,7 +9,7 @@ export default function services() {
             <div className="flex flex-row relative w-screen h-screen">
                 <div className="group flex flex-col justify-center items-center w-full h-screen relative" >
                     <Zoom>
-                        <i className="im im-mobile text-xl lg:text-9xl text-peach  group-hover:opacity-50" />
+                        <i className="im im-mobile text-[50px] lg:text-9xl text-peach  group-hover:opacity-50" />
                     </Zoom>
                     <div className="flex flex-col justify-center items-center bg-newbrown w-full h-screen absolute transform -translate-x-full duration-1000 group-hover:ease-in-out group-hover:translate-x-0 group-hover:duration-1000" >
                         <p className="text-base lg:text-3xl font-bold text-white" >Native Application Development</p>
@@ -20,7 +20,7 @@ export default function services() {
                 </div>
                 <div className="group flex flex-col justify-center items-center w-full h-screen relative" >
                     <Zoom>
-                        <i className="im im-code text-xl lg:text-9xl text-pink group-hover:opacity-50" />
+                        <i className="im im-code text-[50px] lg:text-9xl text-pink group-hover:opacity-50" />
                     </Zoom>
                     <div className="flex flex-col justify-center items-center bg-newbeige w-full h-screen absolute transform translate-x-full duration-1000 group-hover:ease-in-out group-hover:translate-x-0 group-hover:duration-1000 " >
                         <p className="text-base lg:text-3xl font-bold text-white" >Website Development</p>
