@@ -62,42 +62,27 @@ export default function Home() {
     }
   }
 
-  // function disable() {
-  //   // To get the scroll position of current webpage
-  //   let TopScroll = window.pageYOffset || document.documentElement.scrollTop;
-  //   let LeftScroll = window.pageXOffset || document.documentElement.scrollLeft;
-
-  //   // if scroll happens, set it to the previous value
-  //   window.onscroll = function () {
-  //     window.scrollTo(LeftScroll, TopScroll);
-  //   };
-  // }
-
-
-  // function enable() {
-  //   window.onscroll = function () { };
-  // }
 
   function NormalMenu() {
     return (
-      <div className="flex w-full justify-center items-center">
+      <div className="flex w-full justify-end items-center">
         <ul
-          className="flex flex-row self-center text-lg font-semibold text-newbrown mr-[5em] "
+          className="flex flex-row text-[15px] font-semibold text-newbrown pr-[15em] "
           id="header"
         >
-          <a href="" className="pr-5  hover:text-newmaroon  ">
+          <a href="" className="pr-[1em]  hover:text-newmaroon ">
             About
           </a>
-          <a href="#Services" className="px-5 hover:text-newmaroon ">
+          <a href="#Services" className="pr-[1em] hover:text-newmaroon ">
             Services
           </a>
-          <a href="#Projects" className="px-5  hover:text-newmaroon">
+          <a href="#Projects" className="pr-[1em]  hover:text-newmaroon">
             Projects
           </a>
-          <a href="#Contact" className="px-5 hover:text-newmaroon">
+          <a href="#Contact" className="pr-[1em] hover:text-newmaroon">
             Contact
           </a>
-          <a href="" className="pl-5 hover:text-newmaroon ">
+          <a href="" className=" hover:text-newmaroon ">
             Blog
           </a>
         </ul>
@@ -106,7 +91,7 @@ export default function Home() {
   }
 
   return (
-    <div className="font-body">
+    <div className="font-quicksand">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Reister L. Ruedas</title>
@@ -121,10 +106,7 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" ></link>
         <link
           href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
           rel="stylesheet"
@@ -140,7 +122,7 @@ export default function Home() {
       </Head>
 
       <section
-        className="flex flex-row w-full h-max py-[1em] sticky top-0 text-grey z-20  bg-newbeige transition-all transform duration-500"
+        className="flex flex-row w-full h-max py-[2em] sticky top-0 text-grey z-20  transition-all transform duration-500"
         id="header"
       >
         {width <= 1000 ? (
@@ -219,17 +201,13 @@ export default function Home() {
             <div className="flex flex-col w-.40 h-screen justify-center items-center ">
               <div  >
                 <Fade top cascade>
-                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbrown text-left transition-all duration-500" >Hi <span className="text-[14px] lg:text-[20px] text-black">I'm</span> <br /><span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500">Reister</span> <span className="text-[60px] font-extrabold text-black">.</span> <br /> <span className="text-[15px] lg:text-[30px] text-black transition-all duration-500">A Software Engineer</span> </span>
+                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbeige text-left transition-all duration-500" ><br /> <span className="text-[15px] lg:text-[40px] text-black">I'm</span> <span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500 ">Reister</span> <span className="text-[60px] font-extrabold text-black">.</span> <br />  </span>
                 </Fade>
               </div>
               <Fade left>
                 <span className="text-justify text-xs lg:text-sm font-bold lg:self-end py-5 text-newmaroon lg:w-.50 transition-all duration-200">
-                  <span className="lg:text-[] font-light text-newbeige">ABOUT</span>
-                  &nbsp; I'm a Full-stack Engineer based in the Philippines.
-                  Specializes in building web and mobile applications. Currently
-                  improving my artistic and aesthetic skill to provide BEAUTIFUL
-                  and FRIENDLY applications. I also do freelance, want to
-                  collaborate?
+                  <span className="lg:text-[24px] font-light text-black">ABOUT</span>
+                  &nbsp; I'm a Full-stack Engineer based in the Philippines. Specializes in building USER-FRIENDLY and INTERACTIVE web and mobile applications. I also do freelance, want to collaborate?
                 </span>
               </Fade>
             </div>

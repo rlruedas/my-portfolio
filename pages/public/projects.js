@@ -13,7 +13,7 @@ export default function projects() {
             projectName: "MAKATurismo",
             projectDesc: "Explore and Discover more about Makati. This is a tourism mobile application dedicated for you! Have fun around Makati ",
             projectImg: "./device-wireframe.png",
-            projectAvailable: "Coming Soon on Google Play"
+            projectAvailable: "Not yet available"
         },
         {
             projectName: "Coming Soon",
@@ -68,7 +68,7 @@ export default function projects() {
         <div className="flex flex-col w-full relative justify-center items-center " >
             <div className="flex flex-col relative justify-center items-center">
                 <Zoom>
-                    <p className="text-2xl lg:text-5xl font-semibold py-10 text-grey" >My Works</p>
+                    <p className="text-2xl lg:text-5xl font-semibold py-10 text-grey" >My Projects</p>
                 </Zoom>
                 <img src='./work.png' alt="Image was here" className="  absolute -right-28 lg:-right-40 lg:-top-3 transform rotate-12" width="160px" height="160px"></img>
             </div>

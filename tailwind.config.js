@@ -72,7 +72,9 @@ module.exports = {
 
     },
     fontFamily: {
-      body: ['Poppins']
+      'poppins': ['Poppins', 'sans serif'],
+      'tapestry' : ['Tapestry', 'cursive'],
+      'quicksand' : ['Quicksand', 'sans-serif']
     },
   },
   variants: {
