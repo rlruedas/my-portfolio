@@ -66,11 +66,11 @@ export default function projects() {
 
     return (
         <div className="flex flex-col w-full relative justify-center items-center " >
-            <div className="flex flex-col relative justify-center items-center">
+            <div className="flex flex-row relative justify-center items-center">
                 <Zoom>
                     <p className="text-2xl lg:text-5xl font-semibold py-10 text-grey" >My Projects</p>
                 </Zoom>
-                <img src='./work.png' alt="Image was here" className="  absolute -right-28 lg:-right-40 lg:-top-3 transform rotate-12" width="160px" height="160px"></img>
+                <img src='./work.png' alt="Image was here" className="" width="160px" height="160px"></img>
             </div>
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 lg:auto-r gap-8 l w-.70 justify-center items-center pt-10" >
 

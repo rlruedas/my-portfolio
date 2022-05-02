@@ -91,7 +91,7 @@ export default function Home() {
   }
 
   return (
-    <div className="font-quicksand">
+    <div className="font-quicksand bg-gradient-to-bl from-[#fae5cb] via-[#D7A86E] to-[#A64B2A]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Reister L. Ruedas</title>
