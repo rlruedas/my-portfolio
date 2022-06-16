@@ -4,10 +4,10 @@ import Script from "next/script";
 import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
-import Projects from "./public/projects";
-import Services from "../pages/public/services";
-import Techstack from "../pages/public/techstack";
-import BusinessCard from "../pages/public/businesscard";
+import Projects from "./components/projects";
+import Services from "./components/services";
+import Techstack from "./components/techstack";
+import BusinessCard from "./components/businesscard";
 
 export default function Home() {
   const [width, setWidth] = useState();
@@ -53,12 +53,12 @@ export default function Home() {
       console.log(menu.classList);
       menu.style.transform = "translateX(0)";
       menu.style.opacity = "100%";
-      disable();
+      // disable();
     }
     if (toggle === "close") {
       menu.style.transform = "translateX(50em)";
       menu.style.opacity = "0%";
-      enable();
+      // enable();
     }
   }
 
@@ -91,7 +91,7 @@ export default function Home() {
   }
 
   return (
-    <div className="font-quicksand bg-gradient-to-bl from-[#fae5cb] via-[#D7A86E] to-[#A64B2A]">
+    <div className="font-poppins bg-gradient-to-bl from-[#fae5cb] via-[#D7A86E] to-[#A64B2A]">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Reister L. Ruedas</title>
@@ -106,7 +106,7 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         ></link>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></link>
         <link
           href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
           rel="stylesheet"
