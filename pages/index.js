@@ -148,7 +148,7 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <div>&nbsp;</div>
               <button className="">
-                <span class="sr-only">Close menu</span>
+                <span className="sr-only">Close menu</span>
                 <a className="" onClick={() => toggleMenu("close")}>
                   <i className="fa fa-times "></i>
                 </a>

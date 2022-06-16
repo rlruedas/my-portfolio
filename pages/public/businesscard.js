@@ -4,10 +4,14 @@ import Flip from 'react-reveal/Flip'
 
 function businesscard() {
     const [flipCard, setFlipCard] = useState(true);
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
 
-    useEffect(() => {
-
-    }, [])
+    const handleSubmit = async(e) => {
+        e.prevenDefault();
+    }
 
     return (
 
@@ -47,20 +51,20 @@ function businesscard() {
                     </div>
                     :
                     <Flip right>
-                        <div className="flex flex-row relative lg:flex-row z-10 justify-center items-center  w-full  h-.80 md:h-96  rounded-2xl bg-newbeige text-black">
+                        <form className="flex flex-row relative lg:flex-row z-10 justify-center items-center  w-full  h-.80 md:h-96  rounded-2xl bg-newbeige text-black" onSubmit={handleSubmit}>
                             <div className="flex flex-col relative w-[85%] ml-[3em]" >
                                 <div className="flex flex-col justify-evenly items-center relative ">
-                                    <input className="rounded-[3px] w-full px-2 py-2 bg-newwhite placeholder-black " type="text" placeholder="Name" />
-                                    <input className="rounded-[3px] w-full m-1 px-2 py-2 bg-newwhite placeholder-black " type="email" placeholder="Email" />
-                                    <input className="rounded-[3px]  w-full px-2 py-2 m-1 bg-newwhite placeholder-black " type="text" value="Subject" />
-                                    <textarea className="rounded-[3px] w-full h-[180px] m-1 py-2 px-2 bg-newwhite  placeholder-black  text-justify " type="text" placeholder="Message" />
-                                    <input className="rounded-[3px] p-1 bg-newwhite border-2 placeholder-black self-end" type="submit" value="Send Message" />
+                                    <input className="rounded-[3px] w-full px-2 py-2 bg-newwhite placeholder-black " type="text" placeholder="Full Name" minLength="1" required onChange={e => setFullName(e.target.value)} />
+                                    <input className="rounded-[3px] w-full m-1 px-2 py-2 bg-newwhite placeholder-black " type="email" placeholder="Email" minLength="1" required onChange={e => setEmail(e.target.value)} />
+                                    <input className="rounded-[3px]  w-full px-2 py-2 bg-newwhite placeholder-black " type="text" placeHolder="Subject" minLength="1" required onChange={e => setSubject(e.target.value)} />
+                                    <textarea className="rounded-[3px] w-full h-[180px] m-1 py-2 px-2 bg-newwhite  placeholder-black  text-justify " type="text" required minLength="1" placeholder="Message" onChange={e => setMessage(e.target.value)} />
+                                    <button className="rounded-[3px] p-1 px-10 bg-newwhite  placeholder-black self-start" type="submit" value="Send Message" >Send</button>
                                 </div>
                             </div>
                             <div className="flex flex-row w-[10%] m-2 relative items-center justify-center ">
                                 <button className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black" onClick={() => setFlipCard(true)} />
                             </div>
-                        </div>
+                        </form>
                     </Flip>
             }
 
