@@ -158,35 +158,35 @@ export default function Home() {
             <div className="flex flex-col h-screen p-[10em] justify-between items-center text-newmaroon">
               <a
                 href=""
-                className="text-[30px]"
+                className="text=[18px] lg:text-[30px] hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 About
               </a>
               <a
                 href="#Services"
-                className="text-[30px]"
+                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Services
               </a>
               <a
                 href="#Projects"
-                className="text-[30px]"
+                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Projects
               </a>
               <a
                 href="#Contact"
-                className="text-[30px]"
+                className="text=[18px] lg:text-[30px] hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Contact
               </a>
               <a
                 href=""
-                className="text-[30px]"
+                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Blog
