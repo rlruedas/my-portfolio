@@ -145,7 +145,7 @@ export default function Home() {
         style={{ transform: "translateX(50em)" }}
       >
         <div className=" bg-newwhite w-full h-full rounded-md border border-newbrown">
-          <div className="lg:pt-5 lg:pb-6 px-5">
+          <div className="">
             <div className="flex items-center justify-between">
               <div>&nbsp;</div>
               <button className="">
