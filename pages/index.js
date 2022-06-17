@@ -144,49 +144,48 @@ export default function Home() {
         id="burgernavigation"
         style={{ transform: "translateX(50em)" }}
       >
-        <div className=" bg-newwhite w-full h-full rounded-md border border-newbrown">
-          <div className="">
-            <div className="flex items-center justify-between">
-              <div>&nbsp;</div>
-              <button className="">
+        <div className="relative bg-newwhite w-full h-full rounded-md border border-newbrown">
+          <div className="relative flex flex-col h-full">
+            <div className="flex flex-1 relative items-end justify-end pr-[30px]">
+              <button >
                 <span className="sr-only">Close menu</span>
                 <a className="" onClick={() => toggleMenu("close")}>
-                  <i className="fa fa-times "></i>
+                  <i className="fa fa-times text-[40px] self-end" ></i>
                 </a>
               </button>
             </div>
-            <div className="flex flex-col h-screen p-[10em] justify-between items-center text-newmaroon">
+            <div className="flex flex-[10] flex-col relative justify-evenly items-center text-newmaroon">
               <a
                 href=""
-                className="text=[18px] lg:text-[30px] hover:text-newbeige"
+                className="text-[30px] hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 About
               </a>
               <a
                 href="#Services"
-                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
+                className="text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Services
               </a>
               <a
                 href="#Projects"
-                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
+                className="text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Projects
               </a>
               <a
                 href="#Contact"
-                className="text=[18px] lg:text-[30px] hover:text-newbeige"
+                className="text-[30px] hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Contact
               </a>
               <a
                 href=""
-                className="text=[18px] lg:text-[30px]  hover:text-newbeige"
+                className="text-[30px]  hover:text-newbeige"
                 onClick={() => toggleMenu("close")}
               >
                 Blog
