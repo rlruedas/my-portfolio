@@ -9,9 +9,11 @@ import Services from "./components/services";
 import Techstack from "./components/techstack";
 import BusinessCard from "./components/businesscard";
 
+
+
 export default function Home() {
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
   const [burgerMenuClick, setBurgerMenuClick] = useState(false);
 
   const updateDimensions = () => {
@@ -22,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     window.addEventListener("load", updateDimensions);
-
+  
     if (width >= 1000) {
       document.getElementById("burgernavigation").style.transform =
         "translateX(50em)";
@@ -50,7 +52,6 @@ export default function Home() {
     var menu = document.getElementById("burgernavigation");
 
     if (toggle === "open") {
-      console.log(menu.classList);
       menu.style.transform = "translateX(0)";
       menu.style.opacity = "100%";
       // disable();
