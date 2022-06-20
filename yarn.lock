@@ -329,6 +329,47 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@splinetool/loader@npm:^0.9.69":
+  version: 0.9.69
+  resolution: "@splinetool/loader@npm:0.9.69"
+  peerDependencies:
+    three: ">=0.133.0"
+  checksum: 9a82d38a870591fd7e187c528c048d86af3c9c215532713a61b2ff2a77cc849f1e5853576057c491aa7f53c0266cf8440f3a731f8d5a8e624c60092f14ad91cf
+  languageName: node
+  linkType: hard
+
+"@splinetool/r3f-spline@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@splinetool/r3f-spline@npm:1.0.1"
+  peerDependencies:
+    "@react-three/fiber": ">=7.0.0"
+    "@splinetool/loader": ">=0.9.19"
+  checksum: 5385a9f6a7b8d2d849a95199fe4e706e6fac68e7a494e84a2c7358e23dc8773f207a29050578061732be7dcb08169775db80298e061cb9af12fcf8ed7243f0b2
+  languageName: node
+  linkType: hard
+
+"@splinetool/react-spline@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@splinetool/react-spline@npm:2.2.1"
+  dependencies:
+    react-merge-refs: ^1.1.0
+  peerDependencies:
+    "@splinetool/runtime": "*"
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 8223318ab0392a45fc8123c14e1d718efdac239d6cd5a04923097d2597fdfc2e0460caba8cb77b268a1911439b4a17f68340321f912d74387c725fab73871f19
+  languageName: node
+  linkType: hard
+
+"@splinetool/runtime@npm:^0.9.69":
+  version: 0.9.69
+  resolution: "@splinetool/runtime@npm:0.9.69"
+  dependencies:
+    on-change: ^4.0.0
+  checksum: 1651e08fc45fa4183d29b82e98c90b3e69e4e6269e12ed14f2a7c50ba4deb577f09c17054c21972c367ae7c41b48f34629b44857bbba03781161a04ddf7149c8
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -1442,6 +1483,10 @@ __metadata:
   dependencies:
     "@react-three/drei": ^9.13.2
     "@react-three/fiber": ^8.0.26
+    "@splinetool/loader": ^0.9.69
+    "@splinetool/r3f-spline": ^1.0.1
+    "@splinetool/react-spline": ^2.2.1
+    "@splinetool/runtime": ^0.9.69
     autoprefixer: ^10.4.6
     next: ^12.1.5
     next-transpile-modules: ^9.0.0
@@ -1619,6 +1664,13 @@ __metadata:
   version: 3.0.0
   resolution: "object-hash@npm:3.0.0"
   checksum: 80b4904bb3857c52cc1bfd0b52c0352532ca12ed3b8a6ff06a90cd209dfda1b95cee059a7625eb9da29537027f68ac4619363491eedb2f5d3dddbba97494fd6c
+  languageName: node
+  linkType: hard
+
+"on-change@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "on-change@npm:4.0.1"
+  checksum: 23038d603859eafcd8e7ecd7ab682551e2c33c6e12e90dc53c83e453dcb263f5b36c24a945d3e91805273804a2bd6b78f9f91c9bb05dd11771fa626a05d8fb18
   languageName: node
   linkType: hard
 

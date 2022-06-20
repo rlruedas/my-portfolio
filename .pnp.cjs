@@ -35,6 +35,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@react-three/drei", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:9.13.2"],\
             ["@react-three/fiber", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:8.0.26"],\
+            ["@splinetool/loader", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:0.9.69"],\
+            ["@splinetool/r3f-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:1.0.1"],\
+            ["@splinetool/react-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:2.2.1"],\
+            ["@splinetool/runtime", "npm:0.9.69"],\
             ["autoprefixer", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:10.4.6"],\
             ["next", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:12.1.5"],\
             ["next-transpile-modules", "npm:9.0.0"],\
@@ -504,6 +508,95 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-native",\
             "react",\
             "three"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@splinetool/loader", [\
+        ["npm:0.9.69", {\
+          "packageLocation": "./.yarn/cache/@splinetool-loader-npm-0.9.69-46e919ba97-9a82d38a87.zip/node_modules/@splinetool/loader/",\
+          "packageDependencies": [\
+            ["@splinetool/loader", "npm:0.9.69"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:0.9.69", {\
+          "packageLocation": "./.yarn/__virtual__/@splinetool-loader-virtual-3f7cc43e36/0/cache/@splinetool-loader-npm-0.9.69-46e919ba97-9a82d38a87.zip/node_modules/@splinetool/loader/",\
+          "packageDependencies": [\
+            ["@splinetool/loader", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:0.9.69"],\
+            ["@types/three", null],\
+            ["three", "npm:0.141.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/three",\
+            "three"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@splinetool/r3f-spline", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/@splinetool-r3f-spline-npm-1.0.1-39c29e2bf0-5385a9f6a7.zip/node_modules/@splinetool/r3f-spline/",\
+          "packageDependencies": [\
+            ["@splinetool/r3f-spline", "npm:1.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:1.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@splinetool-r3f-spline-virtual-95f4cb06a3/0/cache/@splinetool-r3f-spline-npm-1.0.1-39c29e2bf0-5385a9f6a7.zip/node_modules/@splinetool/r3f-spline/",\
+          "packageDependencies": [\
+            ["@splinetool/r3f-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:1.0.1"],\
+            ["@react-three/fiber", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:8.0.26"],\
+            ["@splinetool/loader", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:0.9.69"],\
+            ["@types/react-three__fiber", null],\
+            ["@types/splinetool__loader", null]\
+          ],\
+          "packagePeers": [\
+            "@react-three/fiber",\
+            "@splinetool/loader",\
+            "@types/react-three__fiber",\
+            "@types/splinetool__loader"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@splinetool/react-spline", [\
+        ["npm:2.2.1", {\
+          "packageLocation": "./.yarn/cache/@splinetool-react-spline-npm-2.2.1-89feaf45d9-8223318ab0.zip/node_modules/@splinetool/react-spline/",\
+          "packageDependencies": [\
+            ["@splinetool/react-spline", "npm:2.2.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@splinetool-react-spline-virtual-be029a8c86/0/cache/@splinetool-react-spline-npm-2.2.1-89feaf45d9-8223318ab0.zip/node_modules/@splinetool/react-spline/",\
+          "packageDependencies": [\
+            ["@splinetool/react-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:2.2.1"],\
+            ["@splinetool/runtime", "npm:0.9.69"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["@types/splinetool__runtime", null],\
+            ["react", "npm:18.1.0"],\
+            ["react-dom", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:18.1.0"],\
+            ["react-merge-refs", "npm:1.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@splinetool/runtime",\
+            "@types/react-dom",\
+            "@types/react",\
+            "@types/splinetool__runtime",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@splinetool/runtime", [\
+        ["npm:0.9.69", {\
+          "packageLocation": "./.yarn/cache/@splinetool-runtime-npm-0.9.69-7d9cf22aea-1651e08fc4.zip/node_modules/@splinetool/runtime/",\
+          "packageDependencies": [\
+            ["@splinetool/runtime", "npm:0.9.69"],\
+            ["on-change", "npm:4.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1810,6 +1903,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["my-portfolio", "workspace:."],\
             ["@react-three/drei", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:9.13.2"],\
             ["@react-three/fiber", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:8.0.26"],\
+            ["@splinetool/loader", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:0.9.69"],\
+            ["@splinetool/r3f-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:1.0.1"],\
+            ["@splinetool/react-spline", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:2.2.1"],\
+            ["@splinetool/runtime", "npm:0.9.69"],\
             ["autoprefixer", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:10.4.6"],\
             ["next", "virtual:17e7ae47aefe3459cf6080b6b5247bcb3cc6453ed7ff2e5bf8e97ce3af345103b55e2822789063a9d12bc39f00a813a1afd042bc9fa94ec04730837877b7269b#npm:12.1.5"],\
             ["next-transpile-modules", "npm:9.0.0"],\
@@ -1989,6 +2086,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/object-hash-npm-3.0.0-d941e0cabe-80b4904bb3.zip/node_modules/object-hash/",\
           "packageDependencies": [\
             ["object-hash", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["on-change", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/on-change-npm-4.0.1-f3a0b5ff59-23038d6038.zip/node_modules/on-change/",\
+          "packageDependencies": [\
+            ["on-change", "npm:4.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
