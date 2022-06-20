@@ -164,14 +164,6 @@ function Scene(props) {
             <meshLambertMaterial color={"#A64B2A"} />
         </mesh>
       </group>
-      <spotLight
-        intensity={1}
-        angle={Math.PI / 6}
-        decay={2}
-        distance={2000}
-        position={[-3.02, 94.18, 247.63]}
-        rotation={[1.26, 0, 0]}
-      />
       <PerspectiveCamera
         makeDefault
         far={100000}
@@ -207,10 +199,10 @@ function techstack() {
                 <h1 className="text-[40px] duration-500 lg:text-[70px] relative text-black lg:w-[60%] text-center  font-bold" >
                     My Tools
                 </h1>
-                <Canvas dpr={[1, 2]}>
+                <Canvas  dpr={[1, 2]}>
                     <Scene />
                     <ambientLight args={["#FFFFFF", .5]} castShadow receiveShadow />
-                    <spotLight intensity={.25} angle={0.2} penumbra={1} position={[-200, 10, 100]} />
+                    <spotLight intensity={1} angle={0.2} penumbra={1} position={[0, 0, 1000]} />
 
                 </Canvas>
 
