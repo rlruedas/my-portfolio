@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Flip from "react-reveal/Flip";
 
-function businesscard() {
+function BusinessCard() {
   const [flipCard, setFlipCard] = useState(true);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ function businesscard() {
       </div>
       {flipCard ? (
         <Flip right>
-          <div className="flex flex-row  relative lg:flex-row z-10 justify-center items-center transform duration-200 w-[23em] sm:w-[40em] h-[50vh]  rounded-2xl bg-newbeige text-black shadow-2xl">
+          <div className="flex flex-row  relative lg:flex-row z-10 justify-center items-center transform duration-200 w-[18em] sm:w-[40em] h-fit py-[2em]  rounded-2xl bg-newbeige text-black shadow-2xl">
             <div className="flex flex-row justify-around w-[100%]  items-center ">
               <img
                 src="/logo-nobg.png"
@@ -31,34 +31,34 @@ function businesscard() {
                 className="hidden sm:flex rounded-lg w-64 h-64 "
               ></img>
               <div className="flex flex-col static w-[90%] gap-4 ">
-                <div className="">
+                <div className="text-[.7em] sm:text-[1em]">
                   <i className="fa fa-map-marker"></i>
                   <p>Antipolo City, Rizal, 1870</p>
                 </div>
-                <div className="">
+                <div className="text-[.7em] sm:text-[1em]">
                   <i className="fa fa-envelope"></i>
                   <p className="">reister.ruedas@gmail.com</p>
                   <p>rlruedas@student.apc.edu.ph</p>
                 </div>
-                <div className="">
+                <div className="text-[.7em] sm:text-[1em]">
                   <i className="fa fa-phone"></i>
                   <p>+639493241618</p>
                 </div>
-                <div className="">
+                <div className="text-[.7em] sm:text-[1em]">
                   <i className="fa fa-file-text"></i> <br />
                   <a
                     href="./Resume-Reister-Ruedas.pdf"
                     className="rounded-md bg-transparent placeholder-gray-700 self-end hover:opacity-50"
                     download
                   >
-                    Download Resume
+                    Download My Resume
                   </a>
                 </div>
               </div>
             </div>
             <div className="flex justify-center items-center w-[30%] h-[100%]  ">
               <button
-                className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black"
+                className="w-[1.5em] h-[1.5em] rounded-full border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black"
                 onClick={() => setFlipCard(false)}
               />
             </div>
@@ -73,7 +73,7 @@ function businesscard() {
             <div className="flex flex-col relative w-[100%] ml-[1em]">
               <form className="flex flex-col justify-evenly items-center relative gap-2">
                 <input
-                  className="rounded-[3px] w-full  p-1 bg-newwhite placeholder-black "
+                  className="rounded-[3px] text-[.8em] w-full  p-1 bg-newwhite placeholder-black "
                   type="text"
                   placeholder="Full Name"
                   minLength="1"
@@ -81,7 +81,7 @@ function businesscard() {
                   onChange={(e) => setFullName(e.target.value)}
                 />
                 <input
-                  className="rounded-[3px] w-full p-1  bg-newwhite placeholder-black "
+                  className="rounded-[3px] text-[.8em] w-full p-1  bg-newwhite placeholder-black "
                   type="email"
                   placeholder="Email"
                   minLength="1"
@@ -89,7 +89,7 @@ function businesscard() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                  className="rounded-[3px]  w-full  p-1   bg-newwhite placeholder-black "
+                  className="rounded-[3px] text-[.8em]  w-full  p-1   bg-newwhite placeholder-black "
                   type="text"
                   placeHolder="Subject"
                   minLength="1"
@@ -97,7 +97,7 @@ function businesscard() {
                   onChange={(e) => setSubject(e.target.value)}
                 />
                 <textarea
-                  className="rounded-[3px] w-full min-h-[150px]  p-1   bg-newwhite  placeholder-black  text-justify "
+                  className="rounded-[3px] text-[.8em] w-full min-h-[8em]  p-1   bg-newwhite  placeholder-black  text-justify "
                   type="text"
                   required
                   minLength="1"
@@ -105,7 +105,7 @@ function businesscard() {
                   onChange={(e) => setMessage(e.target.value)}
                 />
                 <button
-                  className="rounded-sm  bg-newwhite  text-center self-start px-3"
+                  className="rounded-sm text-[.8em]  bg-newwhite  text-center self-start px-3"
                   type="submit"
                   value="Send Message"
                   onClick={() => alert("Sorry this feature is not yet available")}
@@ -116,7 +116,7 @@ function businesscard() {
             </div>
             <div className="flex flex-row w-[20%] relative items-center justify-center ">
               <button
-                className="rounded-3xl h-10 w-10 border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black"
+                className="w-[1.5em] h-[1.5em] rounded-full border-solid border-black border placeholder-gray-700 fa fa-angle-right text-black"
                 onClick={() => setFlipCard(true)}
               />
             </div>
@@ -127,4 +127,4 @@ function businesscard() {
   );
 }
 
-export default businesscard;
+export default BusinessCard;
