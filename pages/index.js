@@ -9,8 +9,6 @@ import Services from "./components/services";
 import Techstack from "./components/techstack";
 import BusinessCard from "./components/businesscard";
 
-
-
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
@@ -24,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     window.addEventListener("load", updateDimensions);
-  
+
     if (width >= 1000) {
       document.getElementById("burgernavigation").style.transform =
         "translateX(50em)";
@@ -54,15 +52,14 @@ export default function Home() {
     if (toggle === "open") {
       menu.style.transform = "translateX(0)";
       menu.style.opacity = "100%";
-      // disable();
+      document.body.style.setProperty("overflow", "hidden", "important");
     }
     if (toggle === "close") {
       menu.style.transform = "translateX(50em)";
       menu.style.opacity = "0%";
-      // enable();
+      document.body.style.setProperty("overflow", "scroll", "important");
     }
   }
-
 
   function NormalMenu() {
     return (
@@ -94,8 +91,8 @@ export default function Home() {
   return (
     <div className="font-poppins bg-gradient-to-bl from-[#fae5cb] via-[#D7A86E] to-[#A64B2A]">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <title>Reister L. Ruedas</title>
+        <link rel="icon" href="/logo-nobg.png" />
+        <title>Reister Ruedas</title>
         <meta name="description" content="Website created by Me" />
         <link
           rel="stylesheet"
@@ -107,7 +104,10 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         ></link>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        ></link>
         <link
           href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
           rel="stylesheet"
@@ -123,7 +123,7 @@ export default function Home() {
       </Head>
 
       <section
-        className="flex flex-row w-full h-max py-[2em] sticky top-0 text-grey z-20  transition-all transform duration-500"
+        className="flex flex-row w-full h-[5em] sticky top-0 text-grey z-20 bg-gradient-to-bl from-[#fae5cb] via-[#D7A86E] to-[#A64B2A]   transition-all transform duration-500 "
         id="header"
       >
         {width <= 1000 ? (
@@ -147,10 +147,10 @@ export default function Home() {
         <div className="relative bg-newwhite w-full h-full rounded-md border border-newbrown">
           <div className="relative flex flex-col h-full">
             <div className="flex flex-1 relative items-end justify-end pr-[30px]">
-              <button >
+              <button>
                 <span className="sr-only">Close menu</span>
                 <a className="" onClick={() => toggleMenu("close")}>
-                  <i className="fa fa-times text-[40px] self-end" ></i>
+                  <i className="fa fa-times text-[40px] self-end"></i>
                 </a>
               </button>
             </div>
@@ -195,19 +195,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="" id="mainBody">
-        <main className=" font-body antialiased items-center block overflow-x-hidden">
+      <section className="flex flex-col overflow-hidden" id="mainBody">
+        <main className="flex flex-col w-[100vw] h-fit font-body antialiased items-center ">
           <section className="flex flex-row w-full h-screen items-center justify-center pb-10">
             <div className="flex flex-col w-.40 h-screen justify-center items-center ">
-              <div  >
+              <div>
                 <Fade top cascade>
-                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbeige text-left transition-all duration-500" ><br /> <span className="text-[15px] lg:text-[40px] text-black">I'm</span> <span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500 ">Reister</span> <span className="text-[60px] font-extrabold text-black">.</span> <br />  </span>
+                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbeige text-left transition-all duration-500">
+                    <br />{" "}
+                    <span className="text-[15px] lg:text-[40px] text-black">
+                      I'm
+                    </span>{" "}
+                    <span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500 ">
+                      Reister
+                    </span>{" "}
+                    <span className="text-[60px] font-extrabold text-black">
+                      .
+                    </span>{" "}
+                    <br />{" "}
+                  </span>
                 </Fade>
               </div>
               <Fade left>
                 <span className="text-justify text-xs lg:text-sm font-bold lg:self-end py-5 text-newmaroon lg:w-.50 transition-all duration-200">
-                  <span className="lg:text-[24px] font-light text-black">ABOUT</span>
-                  &nbsp; I'm a Full-stack Engineer based in the Philippines. Specializes in building USER-FRIENDLY and INTERACTIVE web and mobile applications. I also do freelance, want to collaborate?
+                  <span className="lg:text-[24px] font-light text-black">
+                    ABOUT
+                  </span>
+                  &nbsp; I'm a Full-stack Engineer based in the Philippines.
+                  Specializes in building USER-FRIENDLY and INTERACTIVE web and
+                  mobile applications. I also do freelance, want to collaborate?
                 </span>
               </Fade>
             </div>
@@ -253,22 +269,22 @@ export default function Home() {
           </section>
         </main>
         <footer className="flex- 1 flex w-full flex-col items-center pb-5 text-black bg-newbeige">
-          <div className="flex justify-item-center items-center p-8">
+          <div className="flex justify-item-center items-center p-8 gap-10">
             <a
               href="https://www.linkedin.com/in/reisterruedas/"
-              className="fa fa-linkedin mr-5 hover:opacity-50 "
+              className="fa fa-linkedin hover:opacity-50 text-[25px]"
             ></a>
             <a
               href="https://www.facebook.com/reister.ruedas1/"
-              className="fa fa-facebook mr-5 hover:opacity-50"
+              className="fa fa-facebook hover:opacity-50 text-[25px]"
             ></a>
             <a
               href="https://www.instagram.com/rlruedas/"
-              className="fa fa-instagram mr-5 hover:opacity-50"
+              className="fa fa-instagram hover:opacity-50 text-[25px]"
             ></a>
             <a
               href="https://github.com/rlruedas"
-              className="fa fa-github hover:opacity-50"
+              className="fa fa-github hover:opacity-50 text-[25px]"
             ></a>
           </div>
           <div className="text-center text-lg font-light">
