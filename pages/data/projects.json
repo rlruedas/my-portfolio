@@ -11,7 +11,7 @@
     {
       "projectName": "SNKRSHunt",
       "projectDesc": "Snkrshunt is an entertainment / e-commerce(soon) / (your) personal sneaker website. It provides you the only interesting sneaker contents, which you will like. It's for the sneakerhead people, it present and offer the different shoe brands to choose from",
-      "projectImg": "Coming Soon",
+      "projectImg": "./projassets/snkrshunt.webp",
       "projectAvailable": "Open Now! Visit the link",
       "projectLink": "https://snkrshunt.vercel.app/",
       "projectTechStack": "React | POSTGres SQL | Express | NodeJS"

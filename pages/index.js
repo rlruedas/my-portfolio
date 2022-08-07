@@ -9,6 +9,45 @@ import Services from "./components/services";
 import Techstack from "./components/techstack";
 import BusinessCard from "./components/businesscard";
 
+function NormalMenu({ handleClick }) {
+  return (
+    <div className="flex w-[100vw] justify-center items-center">
+      <ul
+        className="flex flex-row text-[15px] w-[70vw] justify-end items-center gap-6  text-newbrown"
+        id="header"
+      >
+        <button
+          onClick={() => handleClick("About")}
+          className=" hover:text-newmaroon "
+        >
+          About
+        </button>
+        <button
+          onClick={() => handleClick("Services")}
+          className=" hover:text-newmaroon "
+        >
+          Services
+        </button>
+        <button
+          onClick={() => handleClick("Projects")}
+          className=" hover:text-newmaroon"
+        >
+          Projects
+        </button>
+        <button
+          onClick={() => handleClick("Contact")}
+          className=" hover:text-newmaroon"
+        >
+          Contact
+        </button>
+        <a href="" className=" hover:text-newmaroon ">
+          Blog
+        </a>
+      </ul>
+    </div>
+  );
+}
+
 export default function Home() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
@@ -17,6 +56,17 @@ export default function Home() {
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
+  };
+
+  const handleOnClick = (elem) => {
+    if (elem === "Services") {
+      document.getElementById(`${elem}`).scrollIntoView({ behavior: "smooth" });
+    } else if (elem === "Projects") {
+      document.getElementById(`${elem}`).scrollIntoView({ behavior: "smooth" });
+    } else if (elem === "Contact") {
+      document.getElementById(`${elem}`).scrollIntoView({ behavior: "smooth" });
+    } else
+      document.getElementById(`${elem}`).scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -59,33 +109,6 @@ export default function Home() {
       menu.style.opacity = "0%";
       document.body.style.setProperty("overflow", "scroll", "important");
     }
-  }
-
-  function NormalMenu() {
-    return (
-      <div className="flex w-full justify-end items-center">
-        <ul
-          className="flex flex-row text-[15px] font-semibold text-newbrown pr-[15em] "
-          id="header"
-        >
-          <a href="" className="pr-[1em]  hover:text-newmaroon ">
-            About
-          </a>
-          <a href="#Services" className="pr-[1em] hover:text-newmaroon ">
-            Services
-          </a>
-          <a href="#Projects" className="pr-[1em]  hover:text-newmaroon">
-            Projects
-          </a>
-          <a href="#Contact" className="pr-[1em] hover:text-newmaroon">
-            Contact
-          </a>
-          <a href="" className=" hover:text-newmaroon ">
-            Blog
-          </a>
-        </ul>
-      </div>
-    );
   }
 
   return (
@@ -135,7 +158,7 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <NormalMenu />
+          <NormalMenu handleClick={handleOnClick} />
         )}
       </section>
 
@@ -155,34 +178,42 @@ export default function Home() {
               </button>
             </div>
             <div className="flex flex-[10] flex-col relative justify-evenly items-center text-newmaroon">
-              <a
-                href=""
+              <button
                 className="text-[30px] hover:text-newbeige"
-                onClick={() => toggleMenu("close")}
+                onClick={() => {
+                  toggleMenu("close");
+                  handleOnClick("About");
+                }}
               >
                 About
-              </a>
-              <a
-                href="#Services"
+              </button>
+              <button
                 className="text-[30px]  hover:text-newbeige"
-                onClick={() => toggleMenu("close")}
+                onClick={() => {
+                  toggleMenu("close");
+                  handleOnClick("Services");
+                }}
               >
                 Services
-              </a>
-              <a
-                href="#Projects"
+              </button>
+              <button
                 className="text-[30px]  hover:text-newbeige"
-                onClick={() => toggleMenu("close")}
+                onClick={() => {
+                  toggleMenu("close");
+                  handleOnClick("Projects");
+                }}
               >
                 Projects
-              </a>
-              <a
-                href="#Contact"
+              </button>
+              <button
                 className="text-[30px] hover:text-newbeige"
-                onClick={() => toggleMenu("close")}
+                onClick={() => {
+                  toggleMenu("close");
+                  handleOnClick("Contact");
+                }}
               >
                 Contact
-              </a>
+              </button>
               <a
                 href=""
                 className="text-[30px]  hover:text-newbeige"
@@ -197,7 +228,10 @@ export default function Home() {
 
       <section className="flex flex-col overflow-hidden" id="mainBody">
         <main className="flex flex-col w-[100vw] h-fit font-body antialiased items-center ">
-          <section className="flex flex-row w-full h-screen items-center justify-center pb-10">
+          <section
+            className="flex flex-row w-full h-screen items-center justify-center pb-10"
+            id="About"
+          >
             <div className="flex flex-col w-.40 h-screen justify-center items-center ">
               <div>
                 <Fade top cascade>
@@ -253,7 +287,7 @@ export default function Home() {
           </section>
 
           <section
-            className="group flex flex-col lg:flex-row w-full md:h-screen items-center justify-center relative "
+            className="group flex flex-col lg:flex-row w-full h-fit items-center justify-center relative mt-[10em] transform duration-200"
             id="Contact"
           >
             <div className="flex flex-col justify-center items-center relative">
