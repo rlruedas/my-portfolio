@@ -102,12 +102,12 @@ export default function Home() {
     if (toggle === "open") {
       menu.style.transform = "translateX(0)";
       menu.style.opacity = "100%";
-      document.body.style.setProperty("overflow", "hidden", "important");
+      document.body.style.setProperty("overflow", "clip", "important");
     }
     if (toggle === "close") {
       menu.style.transform = "translateX(50em)";
       menu.style.opacity = "0%";
-      document.body.style.setProperty("overflow", "scroll", "important");
+      document.body.style.setProperty("overflow", "auto", "important");
     }
   }
 
@@ -150,12 +150,12 @@ export default function Home() {
         id="header"
       >
         {width <= 1000 ? (
-          <div className="flex w-full justify-end ">
-            <button>
-              <a className="mr-[3em]" onClick={() => toggleMenu("open")}>
+          <div className="flex w-full justify-center items-center ">
+            <div className="flex justify-end items-center w-[80vw]">
+              <button onClick={() => toggleMenu("open")}>
                 <i className="fa fa-bars "></i>
-              </a>
-            </button>
+              </button>
+            </div>
           </div>
         ) : (
           <NormalMenu handleClick={handleOnClick} />
@@ -167,13 +167,27 @@ export default function Home() {
         id="burgernavigation"
         style={{ transform: "translateX(50em)" }}
       >
-        <div className="relative bg-newwhite w-full h-full rounded-md border border-newbrown">
+        <div className="relative bg-newwhite w-full h-full  border border-newbrown">
           <div className="relative flex flex-col h-full">
             <div className="flex flex-1 relative items-end justify-end pr-[30px]">
               <button>
                 <span className="sr-only">Close menu</span>
-                <a className="" onClick={() => toggleMenu("close")}>
-                  <i className="fa fa-times text-[40px] self-end"></i>
+                <a className="">
+                  <svg
+                    className="w-6 h-6"
+                    fillRule="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    onClick={() => toggleMenu("close")}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
                 </a>
               </button>
             </div>
@@ -227,31 +241,29 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col overflow-hidden" id="mainBody">
-        <main className="flex flex-col w-[100vw] h-fit font-body antialiased items-center ">
+        <main className="flex flex-col w-[100vw] h-fit font-body antialiased items-center gap-[10em] ">
           <section
-            className="flex flex-row w-full h-screen items-center justify-center pb-10"
+            className="flex flex-row w-full h-[70vh] items-center justify-center"
             id="About"
           >
-            <div className="flex flex-col w-.40 h-screen justify-center items-center ">
-              <div>
-                <Fade top cascade>
-                  <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbeige text-left transition-all duration-500">
-                    <br />{" "}
-                    <span className="text-[15px] lg:text-[40px] text-black">
-                      I'm
-                    </span>{" "}
-                    <span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500 ">
-                      Reister
-                    </span>{" "}
-                    <span className="text-[60px] font-extrabold text-black">
-                      .
-                    </span>{" "}
-                    <br />{" "}
-                  </span>
-                </Fade>
-              </div>
+            <div className="flex flex-col w-.40 justify-center items-center ">
+              <Fade top cascade>
+                <span className="leading-[1em] text-[20px] lg:text-[50px] text-newbeige text-left transition-all duration-500">
+                  <br />{" "}
+                  <span className="text-[15px] lg:text-[40px] text-black">
+                    I'm
+                  </span>{" "}
+                  <span className="leading-[1em] text-[40px] lg:text-[120px] text-newmaroon transition-all duration-500 ">
+                    Reister
+                  </span>{" "}
+                  <span className="text-[60px] font-extrabold text-black">
+                    .
+                  </span>{" "}
+                  <br />{" "}
+                </span>
+              </Fade>
               <Fade left>
-                <span className="text-justify text-xs lg:text-sm font-bold lg:self-end py-5 text-newmaroon lg:w-.50 transition-all duration-200">
+                <span className="text-justify text-xs lg:text-sm font-bold lg:self-end text-newmaroon lg:w-.50 transition-all duration-200">
                   <span className="lg:text-[24px] font-light text-black">
                     ABOUT
                   </span>
@@ -261,33 +273,17 @@ export default function Home() {
                 </span>
               </Fade>
             </div>
-            <div className="flex w-.30 h-screen justify-center items-center">
+            <div className="flex w-.30  justify-center items-center">
               <img src="./profileImage.png" alt="Image was here"></img>
             </div>
           </section>
 
-          <section
-            className="flex flex-col w-screen h-screen item-center self-center my-20"
-            id="Services"
-          >
-            <div className="flex flex-col  items-center justify-center relative ">
-              <Services />
-            </div>
-          </section>
+          <Services />
+          <Projects />
+          <Techstack />
 
           <section
-            className="flex flex-col w-full items-center justify-center my-20 text-black "
-            id="Projects"
-          >
-            <Projects />
-          </section>
-
-          <section>
-            <Techstack />
-          </section>
-
-          <section
-            className="group flex flex-col lg:flex-row w-full h-fit items-center justify-center relative mt-[10em] transform duration-200"
+            className="group flex flex-col lg:flex-row w-full h-fit items-center justify-center relative transform duration-200"
             id="Contact"
           >
             <div className="flex flex-col justify-center items-center relative">

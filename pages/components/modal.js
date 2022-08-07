@@ -5,14 +5,23 @@ function Modal({ details, count, modal }) {
   return (
     <Zoom>
       <div className="flex flex-col w-screen overflow-scroll h-[100vh] fixed top-0 left-0 z-30 justify-center items-center bg-newbeige ">
-        <button className="absolute top-10 right-10" onClick={() => modal()}>
+        <button
+          className="relative w-[90vw] flex justify-end items-center "
+          onClick={() => modal()}
+        >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            className="w-6 h-6 hover:scale-105 transform duration-200"
+            fillRule="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
         <div className="flex flex-col md:flex-row relative w-[90vw] h-[90vh] gap-10">
@@ -24,7 +33,7 @@ function Modal({ details, count, modal }) {
               {details[count]?.projectDesc ?? ""}
             </p>
             <p className="text-sm lg:text-lg">
-              {details[count]?.projectAvailable ?? ""} <br /> 
+              {details[count]?.projectAvailable ?? ""} <br />
               <a
                 href={`${details[count].projectLink ?? ""}`}
                 className="text-orange-800"

@@ -1,15 +1,10 @@
 import React, { useRef } from 'react'
-import Zoom from 'react-reveal/Zoom'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, PerspectiveCamera } from "@react-three/drei"
-import * as THREE from 'three'
-import Spline from '@splinetool/react-spline'
 import useSpline from '@splinetool/r3f-spline'
 
 
 function Scene(props) {
-    const group = useRef();
-    // const { nodes, materials } = useGLTF("/model/tech_stack.gltf");
     const { nodes, materials } = useSpline('https://prod.spline.design/inHikiUAUMngwQ3c/scene.splinecode')
     return (
         <>
@@ -224,7 +219,7 @@ function Scene(props) {
 }
 
 
-function techstack() {
+function Techstack() {
 
 
     return (
@@ -244,6 +239,4 @@ function techstack() {
     )
 }
 
-export default techstack
-
-useGLTF.preload("/model/tech_stack.gltf");
+export default Techstack
