@@ -1,0 +1,28 @@
+{
+  "projectDetails": [
+    {
+      "projectName": "MAKATurismo",
+      "projectDesc": "Explore and Discover more about Makati. This is a tourism mobile application dedicated for you! Have fun around Makati ",
+      "projectImg": "./projassets/makaturismo.webp",
+      "projectAvailable": "Sorry this project has been discontinued and will no get published on Play Store",
+      "projectLink": null,
+      "projectTechStack": "React Native | Firebase | Javascript | Git"
+    },
+    {
+      "projectName": "SNKRSHunt",
+      "projectDesc": "Snkrshunt is an entertainment / e-commerce(soon) / (your) personal sneaker website. It provides you the only interesting sneaker contents, which you will like. It's for the sneakerhead people, it present and offer the different shoe brands to choose from",
+      "projectImg": "Coming Soon",
+      "projectAvailable": "Open Now! Visit the link",
+      "projectLink": "https://snkrshunt.vercel.app/",
+      "projectTechStack": "React | POSTGres SQL | Express | NodeJS"
+    },
+    {
+        "projectName": "Coming Soon",
+        "projectDesc": "Coming Soon",
+        "projectImg": "Coming Soon",
+        "projectAvailable": "Coming Soon",
+        "projectLink": null,
+        "projectTechStack": "Coming Soon"
+      }
+  ]
+}
