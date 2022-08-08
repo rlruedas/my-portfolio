@@ -23,7 +23,7 @@ function BusinessCard() {
       </div>
       {flipCard ? (
         <Flip right>
-          <div className="flex flex-row  relative lg:flex-row z-10 justify-center items-center transform duration-200 w-[18em] sm:w-[40em] h-fit py-[2em]  rounded-2xl bg-newbeige text-black shadow-2xl">
+          <div className="flex flex-row  relative lg:flex-row z-10 justify-center items-center transform duration-200 w-[18em] sm:w-[40em] h-[20em] py-[2em]  rounded-2xl bg-newbeige text-black shadow-2xl">
             <div className="flex flex-row justify-around w-[100%]  items-center ">
               <img
                 src="/logo-nobg.png"
@@ -67,7 +67,7 @@ function BusinessCard() {
       ) : (
         <Flip right>
           <form
-            className="flex flex-row relative lg:flex-row z-10 justify-center items-center transform duration-200  w-[23em] sm:w-[40em] h-[50vh]  rounded-2xl bg-newbeige text-black"
+            className="flex flex-row relative lg:flex-row z-10 justify-center items-center transform duration-200  w-[18em] sm:w-[40em] h-[20em] py-[2em] rounded-2xl bg-newbeige text-black"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col relative w-[100%] ml-[1em]">
