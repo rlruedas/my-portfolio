@@ -17,7 +17,7 @@ export default function Services() {
                     <img src="./lookright.png" alt="Image was here" className=" absolute left-0 top-0 w-[10em] h-[10em] sm:w-[15em] sm:h-[15em] opacity-0 duration-300 group-hover:opacity-100" ></img>
 
                 </div>
-                <div className="group flex flex-col justify-center items-center w-full h-screen relative " >
+                <div className="group flex flex-col justify-center items-center w-full h-screen relative z-10 " >
                     <Zoom>
                         <i className="im im-code text-[50px] lg:text-9xl text-pink transform duration-200 group-hover:opacity-50" />
                     </Zoom>
