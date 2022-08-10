@@ -4,7 +4,7 @@ import Zoom from "react-reveal/Zoom";
 function Modal({ details, count, modal }) {
   return (
     <Zoom>
-      <div className="flex flex-col w-screen overflow-scroll h-[100vh] fixed top-0 left-0 z-30 justify-center items-center bg-newbeige ">
+      <div className="flex flex-col w-full overflow-auto h-[100vh] fixed top-0 left-0 z-50 justify-center items-center bg-newbeige ">
         <button
           className="relative w-[90vw] flex justify-end items-center "
           onClick={() => modal()}

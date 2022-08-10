@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Zoom from "react-reveal/Zoom";
-
 import data from "../data/projects";
-
 import Modal from "./modal";
 
 export default function Projects() {
@@ -21,7 +19,7 @@ export default function Projects() {
       document
         .querySelector(".project-details")
         .classList.replace("block", "hidden");
-      document.body.style.setProperty("overflow", "scroll", "important");
+      document.body.style.setProperty("overflow", "auto", "important");
     }
   }
 
@@ -29,7 +27,7 @@ export default function Projects() {
     <div className="flex flex-col w-full relative justify-center items-center" id="Projects">
       <div className="flex flex-row relative justify-center items-center">
         <Zoom>
-          <p className="text-[30px] lg:text-[60px] font-bold py-10 text-grey ">
+          <p className="text-[1.5em] lg:text-[60px] font-black py-10 text-black ">
             My Projects
           </p>
         </Zoom>

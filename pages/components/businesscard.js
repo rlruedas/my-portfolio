@@ -13,12 +13,12 @@ function BusinessCard() {
   };
 
   return (
-    <div className="flex flex-col relative justify-center items-center w-fit m-10">
+    <div className="flex flex-col relative justify-center z-50 items-center w-fit m-10">
       <div>
         <img
           src="./hmu.png"
           alt="Image was here"
-          className="absolute -top-64 right-0 w-64 h-64 z-0 opacity-0 hidden transform translate-y-72 duration-150 lg:flex group-hover:opacity-100 group-hover:translate-y-0"
+          className="absolute top-0 right-0 w-64 h-64 opacity-0 hidden transform translate-y-0 duration-150 lg:flex group-hover:opacity-100 group-hover:-translate-y-[16em]"
         ></img>
       </div>
       {flipCard ? (
