@@ -1,6 +1,8 @@
 import React from "react";
 import Zoom from "react-reveal/Zoom";
 
+import { HiOutlineExternalLink } from "react-icons/hi";
+
 function Modal({ details, count, modal }) {
   return (
     <Zoom>
@@ -32,7 +34,7 @@ function Modal({ details, count, modal }) {
             <p className="text-sm lg:text-lg text-justify">
               {details[count]?.projectDesc ?? ""}
             </p>
-            <p className="text-sm lg:text-lg">
+            <p className="text-sm lg:text-lg gap-[10em]">
               {details[count]?.projectAvailable ?? ""} <br />
               <a
                 href={`${details[count].projectLink ?? ""}`}
@@ -41,6 +43,12 @@ function Modal({ details, count, modal }) {
                 {details[count].projectLink}
               </a>
             </p>
+            <section className="flex flex-row justify-center items-center gap-5">
+              <span>View Github Repository</span>
+              <a href={`${details[count].projectGithub}`}>
+                <HiOutlineExternalLink className="w-[2em] h-[2em] " />
+              </a>
+            </section>
           </div>
           <div className="md:w-[90vw] justify-center items-center flex">
             <img

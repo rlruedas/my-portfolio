@@ -6,7 +6,8 @@
       "projectImg": "./projassets/makaturismo.webp",
       "projectAvailable": "This project will not get published on the Play Store",
       "projectLink": null,
-      "projectTechStack": "React Native | Firebase | Javascript | Git"
+      "projectTechStack": "React Native | Firebase | Javascript | Git",
+      "projectGithub" : "https://github.com/rlruedas/Makaturismo.git"
     },
     {
       "projectName": "SNKRSHunt",
@@ -14,7 +15,8 @@
       "projectImg": "./projassets/snkrshunt.webp",
       "projectAvailable": "Open Now! Visit the link",
       "projectLink": "https://snkrshunt.vercel.app/",
-      "projectTechStack": "React | POSTGres SQL | Express | NodeJS"
+      "projectTechStack": "React | POSTGres SQL | Express | NodeJS",
+      "projectGithub" : "https://github.com/rlruedas/SNKRHunt.git"
     },
     {
         "projectName": "Coming Soon",

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Projects from "./components/projects";
@@ -8,7 +7,6 @@ import Services from "./components/services";
 import Techstack from "./components/techstack";
 import BusinessCard from "./components/businesscard";
 import ModalMenu from "./components/modalmenu";
-import Document from "./_document";
 
 function NormalMenu({ handleClick }) {
   return (
