@@ -16,11 +16,14 @@ import { FaNodeJs } from "react-icons/fa";
 
 function Techstack() {
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-fit  relative !overflow-x-clip z-0">
+    <div className="flex flex-col justify-center items-center w-screen h-fit  relative !overflow-x-clip z-0 mt-[8em]">
       <div className=" flex flex-col  w-full h-fit justify-center items-center m-0 p-0 relative gap-[3em] z-0">
-        <h1 className="text-[4em] duration-500 lg:text-[70px] relative text-black lg:w-[60%] text-center  font-bold">
-          My Tools
-        </h1>
+        <section className="relative flex flex-row w-full h-fit justify-center items-center">
+          <h1 className="text-[4em] duration-500 lg:text-[70px] relative text-black text-center  font-bold z-10">
+            My Tools
+          </h1>
+          <img src="./tools.png" alt="toolsimage" className="hidden absolute translate-x-[15em] rotate-12 max-w-[10em] max-h-[10em] z-0 sm:block" />
+        </section>
         <section className="flex flex-col w-full h-fit justify-center items-center z-10">
           <h1 className="font-bold text-[2em]">Tech Stack</h1>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 justify-center items-center transform duration-500">

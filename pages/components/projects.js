@@ -27,16 +27,14 @@ export default function Projects() {
     <div className="flex flex-col w-full relative justify-center items-center" id="Projects">
       <div className="flex flex-row relative justify-center items-center">
         <Zoom>
-          <p className="text-[1.5em] lg:text-[60px] font-black py-10 text-black ">
+          <p className="text-[4em] font-black py-10 text-black ">
             My Projects
           </p>
         </Zoom>
         <img
           src="./work.png"
           alt="Image was here"
-          className=""
-          width="160px"
-          height="160px"
+          className="hidden w-[10em] h-[10em] absolute translate-x-[17em] sm:block"
         ></img>
       </div>
       <div className="grid sm:grid-cols-2 xl:grid-cols-3 lg:auto-r gap-8 l w-.70 justify-center items-center pt-10">
