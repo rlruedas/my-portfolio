@@ -19,12 +19,12 @@
       "projectGithub" : "https://github.com/rlruedas/SNKRHunt.git"
     },
     {
-        "projectName": "Coming Soon",
-        "projectDesc": "Coming Soon",
+        "projectName": "QuotesCafe",
+        "projectDesc": "QuotesCafe is made for people who are looking for some motivations to start their day. Others just love to look for some words of affirmation to get through the day. The site provides some random motivational or inspirational quote to the user where they can share it on different social media platform",
         "projectImg": "Coming Soon",
         "projectAvailable": "Coming Soon",
         "projectLink": null,
-        "projectTechStack": "Coming Soon"
+        "projectTechStack": "NextJS | React | Tailwind | Javascript"
       }
   ]
 }
