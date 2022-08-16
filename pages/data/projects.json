@@ -7,7 +7,7 @@
       "projectAvailable": "This project will not get published on the Play Store",
       "projectLink": null,
       "projectTechStack": "React Native | Firebase | Javascript | Git",
-      "projectGithub" : "https://github.com/rlruedas/Makaturismo-1.git"
+      "projectGithub": "https://github.com/rlruedas/Makaturismo-1.git"
     },
     {
       "projectName": "SNKRSHunt",
@@ -16,15 +16,25 @@
       "projectAvailable": "Open Now! Visit the link",
       "projectLink": "https://snkrshunt.vercel.app/",
       "projectTechStack": "React | POSTGres SQL | Express | NodeJS",
-      "projectGithub" : "https://github.com/rlruedas/SNKRHunt.git"
+      "projectGithub": "https://github.com/rlruedas/SNKRHunt.git"
     },
     {
-        "projectName": "QuotesCafe",
-        "projectDesc": "QuotesCafe is made for people who are looking for some motivations to start their day. Others just love to look for some words of affirmation to get through the day. The site provides some random motivational or inspirational quote to the user where they can share it on different social media platform",
-        "projectImg": "Coming Soon",
-        "projectAvailable": "Coming Soon",
-        "projectLink": null,
-        "projectTechStack": "NextJS | React | Tailwind | Javascript"
-      }
+      "projectName": "QuotesCafe",
+      "projectDesc": "QuotesCafe is made for people who are looking for some motivations to start their day. Others just love to look for some words of affirmation to get through the day. The site provides some random motivational or inspirational quote to the user where they can share it on different social media platform",
+      "projectImg": "Coming Soon",
+      "projectAvailable": "Open Now but Limited",
+      "projectLink": "https://quotescafe.vercel.app/",
+      "projectTechStack": "NextJS | React | Tailwind | Javascript",
+      "projectGithub": ""
+    },
+    {
+      "projectName": "Coming Soon",
+      "projectDesc": "Coming Soon",
+      "projectImg": "Coming Soon",
+      "projectAvailable": "Coming Soon",
+      "projectLink": null,
+      "projectTechStack": "",
+      "projectGithub": ""
+    }
   ]
 }
