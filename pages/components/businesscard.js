@@ -47,7 +47,7 @@ function BusinessCard() {
                 <div className="text-[.7em] sm:text-[1em]">
                   <i className="fa fa-file-text"></i> <br />
                   <a
-                    href="./Resume-Reister-Ruedas.pdf"
+                    href="./RUEDAS_REISTER_RESUME.pdf"
                     className="rounded-md bg-transparent placeholder-gray-700 self-end hover:opacity-50"
                     download
                   >
