@@ -26,12 +26,12 @@ export default function Projects() {
 
   return (
     <div
-      className="flex flex-col w-full relative justify-center items-center font-poppins text-newbeige !overflow-hidden"
+      className="flex flex-col w-full relative justify-center items-center font-poppins text-newbeige !overflow-hidden p-10 gap-5"
       id="Projects"
     >
       <Slide bottom >
         <div className="flex flex-row relative justify-center items-center">
-          <p className="text-clamp font-black py-10  ">My Projects</p>
+          <p className="text-clamp font-black ">My Projects</p>
           <img
             src="./work.png"
             alt="Image was here"
@@ -40,7 +40,7 @@ export default function Projects() {
         </div>
       </Slide>
       <Zoom top cascade>
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 lg:auto-r gap-8 l w-.70 justify-center items-center pt-10">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 lg:auto-r gap-8 l w-.70 justify-center items-center ">
           {data.projectDetails.map((item, index) => (
             <div
               key={index}
