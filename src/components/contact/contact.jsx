@@ -28,7 +28,7 @@ function BusinessCard() {
             <img
               src="./hmu.png"
               alt="Image was here"
-              className=" w-64 h-64 -rotate-[30deg] transform duration-300 translate-y-[2em] translate-x-[2em] group-hover:-translate-x-[6em] group-hover:-translate-y-[6em] "
+              className=" w-64 h-64 -rotate-[30deg] hidden lg:block transform duration-300 translate-y-[2em] translate-x-[2em] group-hover:-translate-x-[6em] group-hover:-translate-y-[6em] "
             ></img>
           </div>
         </div>
