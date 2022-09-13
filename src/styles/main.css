@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: #8e3200;
+}
+
+a {
+  outline: none;
+}
+
+.card-shadow {
+  background: linear-gradient(145deg, #983600, #802d00);
+  box-shadow: 8px 8px 16px #612200, -8px -8px 16px #bb4200;
+}
+
+.text-clamp {
+  font-size: clamp(2rem, 8vw, 6rem);
+}
+.contact-clamp {
+  font-size: clamp(0.5rem, 6vw, 2rem);
+}
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(199, 135, 23, 0.6);
+}
