@@ -24,7 +24,7 @@ function BusinessCard() {
               <BsFillArrowRightSquareFill className="text-[28px] w-full text-newbeige" />
             </button>
           </div>
-          <div className="absolute top-2 left-2 z-0 bg-black">
+          <div className="absolute top-2 left-2 z-0">
             <img
               src="./hmu.png"
               alt="Image was here"
