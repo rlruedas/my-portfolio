@@ -21,7 +21,7 @@
     {
       "projectName": "QuotesCafe",
       "projectDesc": "QuotesCafe is made for people who are looking for some motivations to start their day. Others just love to look for some words of affirmation to get through the day. The site provides some random motivational or inspirational quote to the user where they can share it on different social media platform",
-      "projectImg": "Coming Soon",
+      "projectImg": "./projassets/quotescafe.webp",
       "projectAvailable": "Visit the link",
       "projectLink": "https://quotescafe.vercel.app/",
       "projectTechStack": "NextJS | React | Tailwind | Javascript",
