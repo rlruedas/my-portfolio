@@ -52,7 +52,7 @@ function Modal({ details, count, modal }) {
           <img
             src={`${details[count].projectImg}`}
             alt="Image was here"
-            className="object-contain"
+            className="object-contain h-[90%] "
           ></img>
         </div>
       </div>
