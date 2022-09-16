@@ -9,7 +9,7 @@ function Form() {
 
   return (
     <Flip left>
-      <div className="relative flex w-full overflow-hidden">
+      <div className="relative flex w-full overflow-hidden z-50">
         <form className="flex flex-col justify-evenly items-start relative gap-2 w-full">
           <label htmlFor="fullname" className="text-newbeige">
             Full Name

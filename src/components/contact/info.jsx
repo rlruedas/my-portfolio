@@ -5,7 +5,7 @@ function Info() {
   return (
     <>
       <Flip left>
-        <div className="flex flex-row justify-around w-full  items-center text-newbeige">
+        <div className="flex flex-row justify-around w-full  items-center text-newbeige z-50">
           <img
             src="/logo-nobg.png"
             alt={"Image"}
