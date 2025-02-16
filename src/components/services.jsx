@@ -11,7 +11,7 @@ export default function Services() {
       className="relative flex flex-col justify-center items-center font-poppins w-full min-h-screen !overflow-hidden"
       id="Services"
     >
-      <div className="flex flex-row relative w-full min-h-screen ">
+      <div className="flex flex-row relative w-full ">
         <div className="group flex flex-col justify-center items-center w-full relative ">
           <Zoom>
             <HiOutlineDeviceMobile className="text-[50px] transform duration-200 lg:text-9xl text-peach text-newbeige group-hover:opacity-50" />
@@ -57,7 +57,7 @@ export default function Services() {
           ></img>
         </div>
       </div>
-      <p className="text-clamp whitespace-nowrap absolute right-0 text-newbeige hidden rotate-90 translate-x-[2.4em] transform  text-grey font-bold  sm:block ">
+      <p className="text-clamp whitespace-nowrap absolute right-0 text-newbeige hidden rotate-90 translate-x-[2.4em] transform  sm:block ">
         My Services
       </p>
     </div>

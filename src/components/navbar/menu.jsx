@@ -1,7 +1,7 @@
 import React from "react";
 
 function Menu(props) {
-    const { state } = props
+  const { state } = props;
 
   const scrollIntoView = (e, id) => {
     e.preventDefault();
@@ -11,7 +11,10 @@ function Menu(props) {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center gap-6 z-40 font-poppins translate-x-full transition-all duration-500 bg-newmaroon text-newbeige" id="Menu" >
+    <div
+      className="fixed top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center gap-6 z-40 font-poppins translate-x-full transition-all duration-500 bg-newmaroon text-newbeige text-[50px]"
+      id="Menu"
+    >
       <button onClick={(e) => scrollIntoView(e, "About")}>About</button>
       <button onClick={(e) => scrollIntoView(e, "Services")}>Services</button>
       <button onClick={(e) => scrollIntoView(e, "Projects")}>Projects</button>
