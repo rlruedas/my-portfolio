@@ -1,5 +1,5 @@
 import React from "react";
-import Flip from "react-reveal/Flip";
+import { Flip } from "react-swift-reveal";
 
 function Info() {
   return (
