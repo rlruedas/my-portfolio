@@ -6,6 +6,8 @@ function Document() {
   return (
     <Html>
       <Head>
+        <link rel="preconnect" href="https://rsms.me/"></link>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"

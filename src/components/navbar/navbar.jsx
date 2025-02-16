@@ -52,9 +52,9 @@ function Navbar() {
   return (
     <>
       <Slide top cascade>
-        <div className="fixed top-0 left-0 flex flex-row justify-between items-center w-full min-h-[5em] z-50 backdrop-blur-3xl font-poppins text-newbeige nav-bar transition-all duration-500 !overflow-x-hidden pl-[10%] pr-[10%]">
+        <div className="fixed top-0 left-0 flex flex-row justify-between items-center w-full min-h-[5em] z-50 backdrop-blur-3xl font-inter text-newbeige nav-bar transition-all duration-500 !overflow-x-hidden pl-[10%] pr-[10%]">
           <div className="relative h-full flex justify-center items-center">
-            <a href="/" className="text-xl font-thin text-newmaroon">
+            <a href="/" className="text-xl font-bold text-newmaroon">
               rlruedas.
             </a>
           </div>

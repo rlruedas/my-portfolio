@@ -1,9 +1,11 @@
 import React from "react";
 
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { Slide } from "react-swift-reveal";
 
 function Modal({ details, count, modal }) {
   return (
+    <Slide left={true}>
     <div className="flex flex-col w-full min-h-screen !overflow-hidden  fixed top-0 left-0 z-50 justify-center items-center bg-newbeige text-poppins text-newmaroon">
       <button
         className="relative w-[90vw] flex justify-end items-center "
@@ -57,6 +59,8 @@ function Modal({ details, count, modal }) {
         </div>
       </div>
     </div>
+   </Slide>
+
   );
 }
 export default Modal;

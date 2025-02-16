@@ -74,7 +74,8 @@ module.exports = {
       'poppins': ['Poppins', 'sans serif'],
       'tapestry' : ['Tapestry', 'cursive'],
       'quicksand' : ['Quicksand', 'sans-serif'],
-      'fascinate': ['Fascinate', 'cursive' ]
+      'fascinate': ['Fascinate', 'cursive' ],
+      'Inter': ['InterVariable', 'sans-serif'],
     },
   },
   variants: {
