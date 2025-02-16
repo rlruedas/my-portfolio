@@ -11,20 +11,20 @@ function Navbar() {
   useEffect(() => {
     let lastScroll = 0;
 
-    window.addEventListener("scroll", function () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScroll) {
-        document
-          .querySelector(".nav-bar")
-          .classList.replace("top-0", "-top-[5em]");
-      } else {
-        document
-          .querySelector(".nav-bar")
-          .classList.replace("-top-[5em]", "top-0");
-      }
+    // window.addEventListener("scroll", function () {
+    //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //   if (scrollTop > lastScroll) {
+    //     document
+    //       .querySelector(".nav-bar")
+    //       .classList.replace("top-0", "-top-[5em]");
+    //   } else {
+    //     document
+    //       .querySelector(".nav-bar")
+    //       .classList.replace("-top-[5em]", "top-0");
+    //   }
 
-      lastScroll = scrollTop;
-    });
+    //   lastScroll = scrollTop;
+    // });
 
     window.addEventListener("resize", function () {
       setWindowWidth(window.innerWidth);
