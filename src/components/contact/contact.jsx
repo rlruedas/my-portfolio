@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "./form";
 import Info from "./info";
-import Slide from "react-reveal/Slide";
+import Slide from "react-swift-reveal/Slide";
 
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Slide from "react-reveal";
+import Slide from "react-swift-reveal/Slide";
 
 function Desktop() {
   const scrollIntoView = (e, id) => {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../../data/projects.json";
 import Modal from "./modal";
 import Slide from "react-reveal/Slide";
-import Zoom from "react-reveal/Zoom";
+import Zoom from "react-reveal/Zoom"; 
 
 export default function Projects() {
   const [projectCount, setCount] = useState(0);
