@@ -25,16 +25,16 @@ export default function Projects() {
 
   return (
     <div
-      className="flex flex-col w-full relative justify-center items-center font-poppins text-newbeige !overflow-hidden p-10 gap-5"
+      className="flex flex-col w-full relative justify-center items-center font-inter text-newbeige !overflow-hidden p-10 gap-5"
       id="Projects"
     >
       <Slide bottom >
         <div className="flex flex-row relative justify-center items-center">
-          <p className="text-clamp font-black ">My Projects</p>
+          <p className="text-clamp font-semibold ">My Projects</p>
           <img
             src="./work.png"
             alt="Image was here"
-            className="hidden w-[10em] h-[10em]   sm:block"
+            className="hidden w-[10em] h-[10em] sm:block"
           ></img>
         </div>
       </Slide>
@@ -43,23 +43,28 @@ export default function Projects() {
           {data.projectDetails.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col w-full min-h-[20em]  justify-end items-center border-2 border-solid border-newbeige group hover:bg-seashell hover:scale-105 relative gap-5 transition-all duration-500"
-            >
-              <div className="flex justify-end items-center w-[80%] ">
-                <svg
-                  width="24"
-                  height="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  className="transform duration-100 opacity-0 group-hover:opacity-100 -translate-x-[10em] group-hover:translate-x-[0%]"
-                  onClick={() => {
-                    showProject(), setCount(index);
-                  }}
-                >
-                  <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-                </svg>
-              </div>
+              className="flex flex-col w-full min-h-[20em]  justify-end items-center border-2 rounded-lg border-newbeige group hover:bg-seashell hover:scale-105 relative gap-5 transition-all duration-500"
+              onClick={() => {
+                 if (item.projectName !== "Coming Soon") {
+                  showProject(), setCount(index);
+                 }
+              }}
+            > 
+              {
+                item.projectName !== "Coming Soon" ? <div className="flex justify-end items-center w-[80%] ">
+                                        <svg
+                                        width="24"
+                                        height="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        className="transform duration-100 opacity-0 group-hover:opacity-100 -translate-x-[10em] group-hover:translate-x-[0%]"
+                                      >
+                                        <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                                      </svg>
+                                    </div> : null
+              }
+
               <div className="flex flex-col w-[80%] fit justify-center gap-10 mb-7 ">
                 <p className="text-[1.6em] text-peach font-bold tracking-tighter  group-hover:text-black transition-all duration-500">
                   {item.projectName}
