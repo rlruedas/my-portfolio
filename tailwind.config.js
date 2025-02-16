@@ -8,20 +8,20 @@ module.exports = {
         'newmaroon': '#8E3200',
         'newbrown': '#A64B2A',
         'newbeige': '#D7A86E',
-        'newwhite': '#FFEBC1',
+        'newwhite': '#F5F5DC',
       },
       textColor: {
         'newmaroon': '#8E3200',
         'newbrown': '#A64B2A',
         'newbeige': '#D7A86E',
-        'newwhite': '#FFEBC1',
+        'newwhite': '#F5F5DC',
 
       },
       borderColor: {
         'newmaroon': '#8E3200',
         'newbrown': '#A64B2A',
         'newbeige': '#D7A86E',
-        'newwhite': '#FFEBC1',
+        'newwhite': '#F5F5DC',
       },
       width: {
         '.10': '10%',

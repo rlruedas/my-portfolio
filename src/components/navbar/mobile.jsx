@@ -9,7 +9,7 @@ const { state, buttonState } = props;
   
 
   return (
-    <div className="relative w-[30vw] h-full flex justify-center items-center z-50">
+    <div className="relative h-full flex justify-center items-center z-50">
       {!buttonState ? (
         <button onClick={state}>
           <IoClose className="" />

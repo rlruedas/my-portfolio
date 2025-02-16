@@ -22,16 +22,21 @@ export default function Home() {
           preset: "stars",
           background: {
             color: {
-              value: "#8E3200",
+              value: "text-newwhite",
             },
           },
+          particles: {
+            color: {
+              value: "#000",
+            },
+          }
         }}
         init={particlesInit}
       />
-      <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
+      <div className="relative flex flex-col w-full min-h-screen justify-center items-center text-newbeige">
         <Head>
           <link rel="icon" href="/logo-nobg.png" />
-          <title>Reister Ruedas | Portfolio</title>
+          <title>Reister Ruedas</title>
           <meta name="description" content="Website created by Me" />
         </Head>
 
