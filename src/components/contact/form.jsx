@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Flip from "react-swift-reveal/Flip";
+import { Flip } from "react-swift-reveal";
 
 function Form() {
   const [fullName, setFullName] = useState("");

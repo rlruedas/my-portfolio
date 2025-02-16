@@ -3,7 +3,7 @@ import React from "react";
 import { HiOutlineDeviceMobile } from "react-icons/hi";
 import { BsCodeSlash } from "react-icons/bs";
 
-import Zoom from "react-swift-reveal/Zoom";
+import { Zoom } from "react-swift-reveal";
 
 export default function Services() {
   return (

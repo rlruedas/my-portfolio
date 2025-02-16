@@ -13,8 +13,7 @@ import {
   SiCanva,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import Slide from "react-swift-reveal/Slide";
-import Zoom from "react-swift-reveal/Zoom";
+import { Slide, Zoom } from "react-swift-reveal";
 
 function Techstack() {
   return (

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Menu from "./menu";
 import Desktop from "./desktop";
 import Mobile from "./mobile";
-import Slide from "react-swift-reveal/Slide";
+import { Slide } from "react-swift-reveal";
 
 function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
