@@ -16,7 +16,7 @@ A personal portfolio website built with **Next.js, React.js, Tailwind CSS, and d
 - **Contact Form** – Easily get in touch with me
 
 ## 📸 Screenshots
-![Projects Section](https://raw.githubusercontent.com/rlruedas/your-repo/main/public/reaadmeimages/projects.png)
+![Projects Section](https://raw.githubusercontent.com/rlruedas/my-portfolio/main/public/readmeimages/projects.png)
 
 ## 📬 Contact
 If you have any questions or feedback, feel free to reach out!
