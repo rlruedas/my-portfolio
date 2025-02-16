@@ -9,7 +9,7 @@ function Desktop() {
 
   return (
     <div className="h-full flex justify-center items-center gap-7 text-lg ">
-      <Slide top cascade>
+      <Slide top>
         <button className="hover:text-newmaroon" onClick={(e) => scrollIntoView(e, "About")}>About |</button>
         <button className="hover:text-newmaroon" onClick={(e) => scrollIntoView(e, "Services")}>Services |</button>
         <button className="hover:text-newmaroon" onClick={(e) => scrollIntoView(e, "Projects")}>Projects |</button>
