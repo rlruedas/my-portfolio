@@ -23,5 +23,5 @@ If you have any questions or feedback, feel free to reach out!
 
 ---
 
-💻 Built with passion by [Your Name]  
+💻 Built with passion by Reister Ruedas
 ⭐ Feel free to star this repository if you like it!
