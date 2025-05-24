@@ -1,16 +1,62 @@
 import React, { useState } from "react";
 import { Flip } from "react-swift-reveal";
+import emailjs from "@emailjs/browser";
 
 function Form() {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+    timestamp: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+   }
+
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    if (!form.checkValidity()) {
+      return;
+    }
+    const serviceID = 'default_service';
+    const templateID = 'template_d44q1ot';
+    const publicKey = 'bFlKU4KZwmRlAxq9A';
+
+    const formDataWithTimeStamp = {
+    ...formData,
+    timestamp: new Date().toLocaleString(),
+    };
+
+    emailjs.send(serviceID, templateID, formDataWithTimeStamp, publicKey)
+    .then (() => {
+      alert("Message sent successfully!");
+      form.reset();
+      setFormData({
+        fullname: "",
+        email: "",
+        subject: "",
+        message: "",
+        timestamp: "",
+      });
+    }).catch((error) => {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again later.");
+    })
+   }
 
   return (
     <Flip left>
       <div className="relative flex w-full overflow-hidden z-50">
-        <form className="flex flex-col justify-evenly items-start relative gap-2 w-full">
+        <form className="flex flex-col justify-evenly items-start relative gap-2 w-full" 
+            onSubmit={handleSubmit}>
           <label htmlFor="fullname" className="text-newbeige">
             Full Name
           </label>
@@ -20,7 +66,7 @@ function Form() {
             placeholder="e.g. Juan Dela Cruz"
             minLength="1"
             required
-            onChange={(e) => setFullName(e.target.value)}
+            onChange={handleInputChange}
             id="fullname"
           />
           <label htmlFor="email" className="text-newbeige">
@@ -32,7 +78,7 @@ function Form() {
             placeholder="e.g. jdelacruz@gmail.com"
             minLength="1"
             required
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleInputChange}
             id="email"
           />
           <label htmlFor="subject" className="text-newbeige">
@@ -44,7 +90,7 @@ function Form() {
             placeholder="e.g Fix my header"
             minLength="1"
             required
-            onChange={(e) => setSubject(e.target.value)}
+            onChange={handleInputChange}
             id="subject"
           />
           <label htmlFor="message" className="text-newbeige">
@@ -55,15 +101,14 @@ function Form() {
             type="text"
             required
             minLength="1"
-            placeholder="Message"
-            onChange={(e) => setMessage(e.target.value)}
+            placeholder="What can I do for you?"
+            onChange={handleInputChange}
             id="message"
           />
           <button
             className="rounded-sm text-[.8em]  bg-newbeige text-newmaroon  text-center self-start px-3"
             type="submit"
             value="Send Message"
-            onClick={() => alert("Sorry this feature is not yet available")}
           >
             Send
           </button>

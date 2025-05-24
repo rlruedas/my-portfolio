@@ -16,7 +16,7 @@ const Footer = () => {
           <FaInstagramSquare />
         </a>
       </div>
-      <p>Reister L. Ruedas © 2022</p>
+      <p>Reister L. Ruedas © 2025</p>
     </div>
   );
 };

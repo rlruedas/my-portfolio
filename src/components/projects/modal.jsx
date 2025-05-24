@@ -6,7 +6,7 @@ import { Slide } from "react-swift-reveal";
 function Modal({ details, count, modal }) {
   return (
     <Slide left={true}>
-    <div className="flex flex-col w-full min-h-screen !overflow-hidden  fixed top-0 left-0 z-50 justify-center items-center bg-newbeige text-poppins text-newmaroon">
+    <div className="flex flex-col w-full min-h-screen !overflow-hidden  fixed top-0 left-0 z-50 justify-center items-center bg-newwhite text-newmaroon">
       <button
         className="relative w-[90vw] flex justify-end items-center "
         onClick={() => modal()}
@@ -26,9 +26,9 @@ function Modal({ details, count, modal }) {
           />
         </svg>
       </button>
-      <div className="flex flex-col md:flex-row relative w-[90vw] h-[90vh] gap-10">
+      <div className="flex flex-col md:flex-row relative w-[90vw] h-[90vh] gap-10 font-inter">
         <div className="flex flex-col md:w-[40vw]  h-full justify-center items-start gap-7">
-          <p className="text-xl lg:text-6xl">
+          <p className="text-xl lg:text-6xl font-bold">
             {details[count]?.projectName ?? ""}
           </p>
           <p className="text-sm lg:text-lg text-justify">
