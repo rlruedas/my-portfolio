@@ -8,7 +8,7 @@ function Desktop() {
   };
 
   return (
-    <div className="h-full flex justify-center items-center gap-7 text-lg ">
+    <div className="h-full flex justify-center items-center gap-7 text-lg font-poppins">
       <Slide top>
         <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "About")}>About |</button>
         <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "Services")}>Services |</button>

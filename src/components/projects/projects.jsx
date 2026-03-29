@@ -25,14 +25,14 @@ export default function Projects() {
 
   return (
     <div
-      className="flex flex-col w-full relative justify-center items-center font-inter text-newbeige !overflow-hidden p-10 gap-5"
+      className="flex flex-col w-full relative justify-center items-center font-poppins text-newbeige !overflow-hidden p-10 gap-5"
       id="Projects"
     >
       <Slide bottom >
         <div className="flex flex-row relative justify-center items-center">
           <p className="text-clamp font-semibold ">My Projects</p>
           <img
-            src="./work.png"
+            src="./work.webp"
             alt="Image was here"
             className="hidden w-[10em] h-[10em] sm:block"
           ></img>

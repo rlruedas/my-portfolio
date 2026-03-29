@@ -8,7 +8,7 @@ import { Zoom } from "react-swift-reveal";
 export default function Services() {
   return (
     <div
-      className="relative flex flex-col justify-center items-center font-inter w-full min-h-screen !overflow-hidden"
+      className="relative flex flex-col justify-center items-center font-poppins w-full min-h-screen !overflow-hidden"
       id="Services"
     >
       <div className="flex flex-row relative w-full z-10">
@@ -28,7 +28,7 @@ export default function Services() {
             </p>
           </div>
           <img
-            src="./lookright.png"
+            src="./lookright.webp"
             alt="Image was here"
             className=" absolute left-0 top-0 w-[10em] h-[10em] sm:w-[15em] sm:h-[15em] opacity-0 duration-300 group-hover:opacity-100"
           ></img>
@@ -50,7 +50,7 @@ export default function Services() {
             </p>
           </div>
           <img
-            src="./lookleft.png"
+            src="./lookleft.webp"
             alt="Image was here"
             className=" absolute -right-5 bottom-0 w-[10em] h-[10em] sm:w-[15em] sm:h-[15em] opacity-0 duration-300 group-hover:opacity-100 rotate-45"
           ></img>

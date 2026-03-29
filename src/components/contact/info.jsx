@@ -7,7 +7,7 @@ function Info() {
       <Flip left>
         <div className="flex flex-row justify-around w-full  items-center text-newbeige z-50">
           <img
-            src="/logo-nobg.png"
+            src="/logo-nobg.webp"
             alt={"Image"}
             className="hidden sm:flex rounded-lg w-64 h-64 "
           ></img>

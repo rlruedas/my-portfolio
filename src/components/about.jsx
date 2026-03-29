@@ -4,15 +4,15 @@ function Heading() {
   return (
     <>
       <div
-        className="flex flex-col w-[80%] justify-center items-center !overflow-hidden pt-32 font-inter tracking-tighter"
+        className="flex flex-col w-[80%] justify-center items-center !overflow-hidden pt-32 font-poppins tracking-tighter"
         id="About"
       >
         <section className="flex flex-col md:flex-row  justify-center items-center gap-16">
 
-          <img className="w-2/4" src="./profileImage.png" alt="Image was here"></img>
+          <img className="w-2/4" src="./profileImage.webp" alt="Image was here"></img>
           <div className="flex flex-col w-[80vw] md:w-[50vw] justify-center items-start gap-5 ">
             <span className=" whitespace-nowrap gap-3 text-left transition-all duration-500">
-              <span className=" text-[40px] font-bold lg:text-[50px] text-newbeige transition-all duration-500 ">
+              <span className=" text-[40px] font-semibold lg:text-[50px] text-newbeige transition-all duration-500 ">
                 <span className="text-newmaroon">I'm Reister</span> 
               </span>
               <span className="text-[60px] font-extrabold">.</span>

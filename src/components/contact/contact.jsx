@@ -26,7 +26,7 @@ function BusinessCard() {
           </div>
           <div className="absolute top-2 left-2 z-0">
             <img
-              src="./hmu.png"
+              src="./hmu.webp"
               alt="Image was here"
               className=" w-64 h-64 hidden lg:block transform duration-300 group-hover:-translate-y-[12em]  "
             ></img>

@@ -28,7 +28,7 @@ function Techstack() {
               My Tools
             </h1>
             <img
-              src="./tools.png"
+              src="./tools.webp"
               alt="toolsimage"
               className="hidden rotate-12 max-w-[10em] max-h-[10em] z-0 sm:block"
             />
