@@ -3,6 +3,12 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
+  let date = new Date();
+  let year = date.getFullYear().toLocaleString("en-US", { 
+    minimumIntegerDigits: 4, 
+    useGrouping: false 
+  });
+
   return (
     <div className="w-full min-h-[6rem] flex flex-col justify-center items-center font-poppins gap-5 text-newbeige p-[2em]">
       <div className="flex flex-row text-[2em] gap-10 ">
@@ -16,7 +22,7 @@ const Footer = () => {
           <FaInstagramSquare />
         </a>
       </div>
-      <p>Reister L. Ruedas © 2025</p>
+      <p>Reister L. Ruedas © {year}</p>
     </div>
   );
 };
