@@ -31,8 +31,8 @@ function Techstack() {
             <Image
               src="/tools.webp"
               alt="toolsimage"
-              width={160}
-              height={160}
+              width={250}
+              height={250}
               className="hidden rotate-12 max-w-[10em] max-h-[10em] z-0 sm:block"
             />
           </section>
