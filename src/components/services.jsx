@@ -5,6 +5,8 @@ import { BsCodeSlash } from "react-icons/bs";
 
 import { Zoom } from "react-swift-reveal";
 
+import Image from "next/image";
+
 export default function Services() {
   return (
     <div
@@ -27,11 +29,13 @@ export default function Services() {
               Lets transform your website into a functional mobile application.
             </p>
           </div>
-          <img
-            src="./lookright.webp"
+          <Image
+            src="/lookright.webp"
             alt="Image was here"
+            width={200}
+            height={200}
             className=" absolute left-0 top-0 w-[10em] h-[10em] sm:w-[15em] sm:h-[15em] opacity-0 duration-300 group-hover:opacity-100"
-          ></img>
+          />
         </div>
         <div className="group flex flex-col justify-center items-center w-full h-screen relative z-10 text-left">
           <Zoom>
@@ -49,11 +53,13 @@ export default function Services() {
              Lets make your dreaam website into reality?
             </p>
           </div>
-          <img
-            src="./lookleft.webp"
+          <Image
+            src="/lookleft.webp"
             alt="Image was here"
+            width={200}
+            height={200}
             className=" absolute -right-5 bottom-0 w-[10em] h-[10em] sm:w-[15em] sm:h-[15em] opacity-0 duration-300 group-hover:opacity-100 rotate-45"
-          ></img>
+          />
         </div>
       </div>
       <p className="absolute text-newbeige hidden text-[80px] font-bold sm:block ">

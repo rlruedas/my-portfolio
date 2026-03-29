@@ -17,6 +17,7 @@ import {
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { Slide, Zoom } from "react-swift-reveal";
+import Image from "next/image";
 
 function Techstack() {
   return (
@@ -27,9 +28,11 @@ function Techstack() {
             <h1 className="text-clamp duration-500 relative text-center  font-bold z-10">
               My Tools
             </h1>
-            <img
-              src="./tools.webp"
+            <Image
+              src="/tools.webp"
               alt="toolsimage"
+              width={160}
+              height={160}
               className="hidden rotate-12 max-w-[10em] max-h-[10em] z-0 sm:block"
             />
           </section>

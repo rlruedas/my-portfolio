@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import data from "../../data/projects.json";
 import Modal from "./modal";
 import { Slide, Zoom } from "react-swift-reveal";
+import Image from "next/image";
 
 export default function Projects() {
   const [projectCount, setCount] = useState(0);
@@ -31,11 +32,13 @@ export default function Projects() {
       <Slide bottom >
         <div className="flex flex-row relative justify-center items-center">
           <p className="text-clamp font-semibold ">My Projects</p>
-          <img
-            src="./work.webp"
+          <Image
+            src="/work.webp"
             alt="Image was here"
+            width={160}
+            height={160}
             className="hidden w-[10em] h-[10em] sm:block"
-          ></img>
+          />
         </div>
       </Slide>
       <Zoom top cascade>

@@ -5,6 +5,8 @@ import { Slide } from "react-swift-reveal";
 
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
+import Image from "next/image";
+
 function BusinessCard() {
   const [flipCard, setFlipCard] = useState(true);
 
@@ -25,11 +27,13 @@ function BusinessCard() {
             </button>
           </div>
           <div className="absolute top-2 left-2 z-0">
-            <img
-              src="./hmu.webp"
+            <Image
+              src="/hmu.webp"
               alt="Image was here"
+              width={256}
+              height={256}
               className=" w-64 h-64 hidden lg:block transform duration-300 group-hover:-translate-y-[12em]  "
-            ></img>
+            />
           </div>
         </div>
       </Slide>

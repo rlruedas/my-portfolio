@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 function Heading() {
   return (
@@ -9,7 +9,7 @@ function Heading() {
       >
         <section className="flex flex-col md:flex-row  justify-center items-center gap-16">
 
-          <img className="w-2/4" src="./profileImage.webp" alt="Image was here"></img>
+          <Image className="w-2/4" src="/profileImage.webp" alt="Image was here" width={250} height={250} />
           <div className="flex flex-col w-[80vw] md:w-[50vw] justify-center items-start gap-5 ">
             <span className=" whitespace-nowrap gap-3 text-left transition-all duration-500">
               <span className=" text-[40px] font-semibold lg:text-[50px] text-newbeige transition-all duration-500 ">
