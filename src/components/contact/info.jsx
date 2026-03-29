@@ -19,11 +19,10 @@ function Info() {
             <div className="text-[.7em] sm:text-[1em]">
               <i className="fa fa-envelope"></i>
               <p className="">reister.ruedas@gmail.com</p>
-              <p>rlruedas@student.apc.edu.ph</p>
             </div>
             <div className="text-[.7em] sm:text-[1em]">
               <i className="fa fa-phone"></i>
-              <p>+639493241618</p>
+              <p>+639766569472</p>
             </div>
             <div className="text-[.7em] sm:text-[1em]">
               <i className="fa fa-file-text"></i> <br />

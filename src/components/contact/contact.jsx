@@ -10,7 +10,7 @@ function BusinessCard() {
 
   return (
     <div
-      className="flex flex-col md:flex-row relative justify-evenly items-center w-full min-h-screen font-poppins text-newbeige gap-10 !overflow-hidden"
+      className="flex flex-col md:flex-row relative justify-evenly items-center w-full min-h-screen font-poppins text-newbeige gap-10"
       id="Contact"
     >
       <Slide top cascade>
