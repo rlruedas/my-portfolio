@@ -35,7 +35,7 @@ function Techstack() {
               height={160}
               quality={75}
               loading="lazy"
-              className="hidden rotate-12 max-w-[10em] max-h-[10em] z-0 sm:block"
+              className="hidden rotate-12 z-0 sm:block"
             />
           </section>
         </Slide>
