@@ -34,7 +34,7 @@ export default function Projects() {
           {items.map((item, idx) => (
             <div key={item.projectName || idx} className="relative group">
               {/* Timeline marker */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full border-2 border-newmaroon bg-newwhite group-hover:bg-newbrown transition-colors" />
+              <div className="absolute -left-[32px] sm:-left-[41px] top-1.4 w-4 h-4 rounded-full border-2 border-newmaroon bg-newwhite group-hover:bg-newbrown transition-colors" />
 
               {/* Card */}
               <div className="p-6 rounded-2xl bg-newwhite border border-newbeige/60 shadow-sm hover:shadow-md transition-shadow">
