@@ -1,25 +1,16 @@
-import React, { useState } from "react";
-
+import React from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
-function Mobile(props) {
-const { state, buttonState } = props;
-
-  
-
+function Mobile({ isOpen, onToggle }) {
   return (
-    <div className="relative h-full flex justify-center items-center z-50">
-      {!buttonState ? (
-        <button onClick={state} alt="close">
-          <IoClose className="" />
-        </button>
-      ) : (
-        <button onClick={state} alt="menu">
-          <HiOutlineMenuAlt3 className="" />
-        </button>
-      )}
-    </div>
+    <button
+      onClick={onToggle}
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+      className="p-2 text-2xl text-newmaroon hover:text-newbrown transition-colors focus:outline-none"
+    >
+      {isOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
+    </button>
   );
 }
 

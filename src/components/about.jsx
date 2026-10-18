@@ -1,41 +1,63 @@
+import React from "react";
 import Image from "next/image";
+import { Slide } from "react-swift-reveal";
 
-function Heading() {
+function About() {
   return (
-    <>
-      <div
-        className="flex flex-col w-[80%] justify-center items-center !overflow-hidden pt-32 font-poppins tracking-tighter"
-        id="About"
-      >
-        <section className="flex flex-col md:flex-row  justify-center items-center gap-16">
+    <section
+      className="w-full max-w-5xl px-6 pt-32 pb-16 mx-auto font-poppins"
+      id="About"
+    >
+      <Slide bottom>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Profile Picture */}
+          <Image
+            className="w-2/4 max-w-[250px]"
+            src="/profileImage.webp"
+            priority
+            alt="Image was here"
+            width={250}
+            height={250}
+          />
 
-          <Image className="w-2/4" src="/profileImage.webp" priority alt="Image was here" width={250} height={250} />
-          <div className="flex flex-col w-[80vw] md:w-[50vw] justify-center items-start gap-5 ">
-            <span className=" whitespace-nowrap gap-3 text-left transition-all duration-500">
-              <span className=" text-[40px] font-semibold lg:text-[50px] text-newbeige transition-all duration-500 ">
-                <span className="text-newmaroon">I'm Reister</span> 
-              </span>
-              <span className="text-[60px] font-extrabold">.</span>
-            </span>
-            <span className="text-left text-sm md:text-xl font-light lg:self-end text-newbrown transition-all duration-200">
-            A <strong className="font-semibold">Software Engineer based in the Philippines</strong>, 
-            passionate about crafting seamless digital experiences. 
-            Specializes in building user-friendly, responsive, and interactive web and mobile applications that
-            <strong className="font-semibold"> bring ideas to life.</strong>
-            With a keen eye for detail and a strong focus on functionality,
-            I create solutions that are both <strong className="font-semibold">visually appealing and highly efficient.</strong>
-            <br />
-            <br />
-            Let's collaborate to <strong className="font-semibold">turn your vision into reality</strong> with innovation, creativity, and cutting-edge technology!
-            <br />
-            <br />
-            Let me know if you'd like to tweak the tone or focus! 🚀
-            </span>
+          {/* Intro Text */}
+          <div className="flex flex-col items-start text-left space-y-4 max-w-xl">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-newbeige">
+              Hi, I'm <span className="text-newmaroon">Reister Ruedas</span>.
+            </h1>
+
+            <p className="text-base sm:text-lg text-newbrown leading-relaxed font-light">
+              Based in the Philippines, I am a <strong className="font-semibold text-newmaroon">Software Engineer</strong> specializing 
+              in native iOS development with Swift and cross-platform apps. I focus on architecting 
+              responsive, high-performance mobile experiences with clean architecture (Clean Swift, VIPER, MVVM) 
+              and robust engineering. I also build web applications on the side to support end-to-end digital solutions.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="#Projects"
+                className="px-5 py-2.5 rounded-lg bg-newmaroon text-newwhite font-medium hover:bg-newbrown transition-colors shadow-sm"
+              >
+                View Projects
+              </a>
+              <a
+                href="#Experience"
+                className="px-5 py-2.5 rounded-lg border border-newbrown text-newbrown hover:bg-newbrown/10 transition-colors font-medium"
+              >
+                Experience Timeline
+              </a>
+              <a
+                href="#Contact"
+                className="px-5 py-2.5 rounded-lg border border-newbeige text-newbeige hover:bg-newbeige/10 transition-colors font-medium"
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </Slide>
+    </section>
   );
 }
 
-export default Heading;
+export default About;

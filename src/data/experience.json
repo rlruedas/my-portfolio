@@ -1,0 +1,24 @@
+{
+  "workExperience": [
+    {
+      "company": "Yondu, Inc.",
+      "role": "Software Engineer - iOS Developer (Operations)",
+      "period": "Oct 2022 - Present",
+      "location": "Taguig City, PH",
+      "award": "Key Impact: Core contributor to the team awarded \"Outstanding Project of the Year\" (2025); recognized for high-velocity delivery and technical proficiency.",
+      "highlights": [
+        "Leveraged deep expertise in Swift, Combine, and Apple Frameworks to engineer complex features, consistently exceeding sprint targets with a 90% issue resolution rate and significantly reducing production-grade defects.",
+        "Developed maintainable codebases using Clean Swift (VIP), VIPER, and POP, while integrating CI/CD pipelines to ensure modularity and seamless automated testing.",
+        "Proactively resolved critical bottlenecks and bugs within both native iOS and embedded KMP frameworks using Xcode and Android Studio, delivering same-day hotfixes to mitigate revenue loss and improve app stability.",
+        "Partnered with Product Owners and Designers to ensure 100% alignment with project milestones, contributing to the team's recognition by the client."
+      ],
+      "technologies": ["Swift", "SwiftUI", "Combine", "VIPER", "Clean Swift", "Kotlin Multiplatform (KMP)", "Xcode", "CI/CD"]
+    }
+  ],
+  "education": {
+    "institution": "Asia Pacific College",
+    "degree": "Bachelor's Degree, Computer Engineering",
+    "period": "Jun 2018 - Aug 2022",
+    "location": "Makati City, PH"
+  }
+}

@@ -1,71 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Menu from "./menu";
 import Desktop from "./desktop";
 import Mobile from "./mobile";
-import { Slide } from "react-swift-reveal";
 
 function Navbar() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [menuButton, setMenuButton] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    let lastScroll = 0;
+  const toggleMenu = () => {
+    setMobileMenuOpen((prev) => !prev);
+  };
 
-    window.addEventListener("scroll", function () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScroll) {
-        document
-          .querySelector(".nav-bar")
-          .classList.replace("top-0", "-top-[5em]");
-      } else {
-        document
-          .querySelector(".nav-bar")
-          .classList.replace("-top-[5em]", "top-0");
-      }
-
-      lastScroll = scrollTop;
-    });
-
-    window.addEventListener("resize", function () {
-      setWindowWidth(window.innerWidth);
-    });
-
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, []);
-
-  const handleMenuState = () => {
-    setMenuButton(!menuButton);
-
-    if (menuButton) {
-      document
-        ?.querySelector("#Menu")
-        ?.classList.replace("translate-x-full", "translate-x-0");
-    } else {
-      document
-        ?.querySelector("#Menu")
-        ?.classList.replace("translate-x-0", "translate-x-full");
-    }
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   return (
     <>
-      <Slide top cascade>
-        <div className="fixed top-0 left-0 flex flex-row justify-between items-center w-full min-h-[5em] z-50 backdrop-blur-3xl font-poppins text-newbeige nav-bar transition-all duration-500 !overflow-x-hidden pl-[10%] pr-[10%]">
-          <div className="relative h-full flex justify-center items-center">
-            <a href="/" className="text-xl font-bold text-newmaroon">
-              rlruedas.
-            </a>
-          </div>
-          {windowWidth < 769 ? (
-            <Mobile state={handleMenuState} buttonState={menuButton} />
-          ) : (
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#F5F5DC]/90 backdrop-blur-md border-b border-newbeige/40 font-poppins transition-all duration-300">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <a
+            href="#About"
+            className="text-xl font-bold tracking-tight text-newmaroon hover:opacity-80 transition-opacity"
+          >
+            rlruedas<span className="text-newbrown">.</span>
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
             <Desktop />
-          )}
+          </div>
+
+          {/* Mobile Toggle Button */}
+          <div className="md:hidden">
+            <Mobile isOpen={mobileMenuOpen} onToggle={toggleMenu} />
+          </div>
         </div>
-      </Slide>
-      <Menu state={handleMenuState} />
+      </header>
+
+      {/* Mobile Drawer Menu */}
+      <Menu isOpen={mobileMenuOpen} onClose={closeMenu} />
     </>
   );
 }

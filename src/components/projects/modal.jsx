@@ -1,66 +1,118 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { Slide } from "react-swift-reveal";
+import { IoClose } from "react-icons/io5";
 
-function Modal({ details, count, modal }) {
+function Modal({ project, onClose }) {
+  // ESC key to close
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  if (!project) return null;
+
   return (
-    <Slide left={true}>
-    <div className="flex flex-col w-full min-h-screen !overflow-hidden  fixed top-0 left-0 z-50 justify-center items-center bg-newwhite text-newmaroon">
-      <button
-        className="relative w-[90vw] flex justify-end items-center "
-        onClick={() => modal()}
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-2xl bg-newwhite text-newmaroon rounded-2xl shadow-2xl p-6 sm:p-8 font-poppins border border-newbeige/50 overflow-y-auto max-h-[90vh]"
+        onClick={(e) => e.stopPropagation()}
       >
-        <svg
-          className="w-6 h-6 hover:scale-105 transform duration-200"
-          fillRule="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          aria-label="Close modal"
+          className="absolute top-4 right-4 p-2 text-2xl text-newbrown hover:text-newmaroon transition-colors"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
-      <div className="flex flex-col md:flex-row relative w-[90vw] h-[90vh] gap-10 font-inter">
-        <div className="flex flex-col md:w-[40vw]  h-full justify-center items-start gap-7">
-          <p className="text-xl lg:text-6xl font-bold">
-            {details[count]?.projectName ?? ""}
-          </p>
-          <p className="text-sm lg:text-lg text-justify">
-            {details[count]?.projectDesc ?? ""}
-          </p>
-          <p className="text-sm lg:text-lg gap-[10em]">
-            {details[count]?.projectAvailable ?? ""} <br />
-            <a
-              href={`${details[count].projectLink ?? ""}`}
-              className="text-orange-800"
-            >
-              {details[count].projectLink}
-            </a>
-          </p>
-          <section className="flex flex-row justify-center items-center gap-5">
-            <span>View Github Repository</span>
-            <a href={`${details[count].projectGithub}`}>
-              <HiOutlineExternalLink className="w-[2em] h-[2em] " />
-            </a>
-          </section>
+          <IoClose />
+        </button>
+
+        {/* Header */}
+        <div className="mb-4">
+          <span className="text-xs uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded bg-newmaroon/10 text-newmaroon">
+            {project.category === "mobile" ? "Mobile Application" : "Web Application"}
+          </span>
+          <h3 id="modal-title" className="text-2xl sm:text-3xl font-bold mt-2">
+            {project.projectName}
+          </h3>
+          {project.period && (
+            <p className="text-xs text-newbrown/80 mt-1">{project.period}</p>
+          )}
         </div>
-        <div className="md:w-[90vw] justify-center items-center flex">
-          <img
-            src={`${details[count].projectImg}`}
-            alt="Image was here"
-            className="object-contain h-[90%] "
-          ></img>
+
+        {/* Image preview */}
+        {project.projectImg && (
+          <div className="w-full h-48 sm:h-64 rounded-xl overflow-hidden bg-newbeige/20 my-4 flex items-center justify-center border border-newbeige/30">
+            <img
+              src={project.projectImg}
+              alt={project.projectName}
+              className="max-h-full max-w-full object-contain p-2"
+            />
+          </div>
+        )}
+
+        {/* Description */}
+        <p className="text-sm sm:text-base text-newbrown leading-relaxed font-light mt-3">
+          {project.projectDesc}
+        </p>
+
+        {/* Tech Stack */}
+        <div className="mt-5 pt-4 border-t border-newbeige/40">
+          <p className="text-xs font-semibold uppercase tracking-wider text-newmaroon mb-2">
+            Technologies Used
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {project.projectTechStack
+              ?.split("|")
+              .map((tech) => tech.trim())
+              .filter(Boolean)
+              .map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs px-2.5 py-1 rounded bg-newbeige/30 text-newbrown font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+          </div>
+        </div>
+
+        {/* Links */}
+        <div className="flex flex-wrap gap-4 mt-6 pt-4 border-t border-newbeige/40">
+          {project.projectLink && (
+            <a
+              href={project.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-newmaroon text-newwhite text-sm font-medium hover:bg-newbrown transition-colors"
+            >
+              Live Demo <HiOutlineExternalLink className="text-base" />
+            </a>
+          )}
+          {project.projectGithub && (
+            <a
+              href={project.projectGithub}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-newbrown text-newbrown text-sm font-medium hover:bg-newbrown/10 transition-colors"
+            >
+              GitHub Repo <HiOutlineExternalLink className="text-base" />
+            </a>
+          )}
         </div>
       </div>
     </div>
-   </Slide>
-
   );
 }
+
 export default Modal;

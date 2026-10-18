@@ -1,22 +1,30 @@
 import React from "react";
-import { Slide } from "react-swift-reveal";
 
 function Desktop() {
-  const scrollIntoView = (e, id) => {
-    e.preventDefault();
-    document.querySelector(`#${id}`).scrollIntoView();
-  };
+  const navLinks = [
+    { label: "About", href: "#About" },
+    { label: "Services", href: "#Services" },
+    { label: "Projects", href: "#Projects" },
+    { label: "Contact", href: "#Contact" },
+    { label: "Blog", href: "#Contact" },
+  ];
 
   return (
-    <div className="h-full flex justify-center items-center gap-7 text-lg font-poppins">
-      <Slide top>
-        <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "About")}>About |</button>
-        <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "Services")}>Services |</button>
-        <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "Projects")}>Projects |</button>
-        <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "Contact")}>Contact |</button>
-        <button className="hover:text-black" onClick={(e) => scrollIntoView(e, "Contact")}>Blog |</button>
-      </Slide>
-    </div>
+    <nav className="flex items-center gap-6 text-sm font-medium font-poppins">
+      {navLinks.map((link, idx) => (
+        <React.Fragment key={link.label}>
+          <a
+            href={link.href}
+            className="text-newbrown hover:text-newmaroon transition-colors duration-150"
+          >
+            {link.label}
+          </a>
+          {idx < navLinks.length - 1 && (
+            <span className="text-newbeige select-none">|</span>
+          )}
+        </React.Fragment>
+      ))}
+    </nav>
   );
 }
 

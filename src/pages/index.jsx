@@ -1,51 +1,37 @@
-import React, { useCallback } from "react";
+import React from "react";
 import Head from "next/head";
+import Navbar from "../components/navbar/navbar";
 import About from "../components/about";
 import Services from "../components/services";
 import Projects from "../components/projects/projects";
+import Experience from "../components/experience";
 import TechStack from "../components/techstack";
 import Contact from "../components/contact/contact";
 import Footer from "../components/footer";
-import Navbar from "../components/navbar/navbar";
-import Particles from "react-tsparticles";
-import { loadStarsPreset } from "tsparticles-preset-stars";
 
 export default function Home() {
-  const particlesInit = useCallback(async (engine) => {
-    await loadStarsPreset(engine);
-  }, []);
-
   return (
     <>
-      <Particles
-        options={{
-          preset: "stars",
-          background: {
-            color: {
-              value: "text-newwhite",
-            },
-          },
-          particles: {
-            color: {
-              value: "#000",
-            },
-          }
-        }}
-        init={particlesInit}
-      />
-      <div className="relative flex flex-col w-full min-h-screen justify-center items-center text-newbeige">
-        <Head>
-          <link rel="icon" href="/logo-nobg.png" />
-          <title>Reister Ruedas</title>
-          <meta name="description" content="Website created by Me" />
-        </Head>
+      <Head>
+        <link rel="icon" href="/logo-nobg.webp" />
+        <title>Reister Ruedas | Mobile App Engineer</title>
+        <meta
+          name="description"
+          content="Portfolio of Reister Ruedas - Mobile App Engineer specializing in iOS development, Swift, and modern mobile solutions."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
+      <div className="relative min-h-screen bg-newwhite text-newbrown font-poppins selection:bg-newbeige selection:text-newmaroon">
         <Navbar />
-        <About />
-        <Services />
-        <Projects />
-        <TechStack />
-        <Contact />
+        <main className="flex flex-col w-full">
+          <About />
+          <Services />
+          <Projects />
+          <Experience />
+          <TechStack />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </>

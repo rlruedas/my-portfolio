@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Flip } from "react-swift-reveal";
 import emailjs from "@emailjs/browser";
 
 function Form() {
@@ -8,113 +7,148 @@ function Form() {
     email: "",
     subject: "",
     message: "",
-    timestamp: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState(null); // { type: 'success' | 'error', text: '' }
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-
     setFormData((prevData) => ({
       ...prevData,
       [id]: value,
     }));
-   }
+  };
 
-   const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     if (!form.checkValidity()) {
       return;
     }
-    const serviceID = 'default_service';
-    const templateID = 'template_d44q1ot';
-    const publicKey = 'bFlKU4KZwmRlAxq9A';
+
+    setIsSubmitting(true);
+    setFeedback(null);
+
+    const serviceID = "default_service";
+    const templateID = "template_d44q1ot";
+    const publicKey = "bFlKU4KZwmRlAxq9A";
 
     const formDataWithTimeStamp = {
-    ...formData,
-    timestamp: new Date().toLocaleString(),
+      ...formData,
+      timestamp: new Date().toLocaleString(),
     };
 
-    emailjs.send(serviceID, templateID, formDataWithTimeStamp, publicKey)
-    .then (() => {
-      alert("Message sent successfully!");
-      form.reset();
-      setFormData({
-        fullname: "",
-        email: "",
-        subject: "",
-        message: "",
-        timestamp: "",
+    emailjs
+      .send(serviceID, templateID, formDataWithTimeStamp, publicKey)
+      .then(() => {
+        setFeedback({
+          type: "success",
+          text: "Thank you! Your message was sent successfully.",
+        });
+        setFormData({
+          fullname: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+        setFeedback({
+          type: "error",
+          text: "Failed to send message. You can reach out directly via reister.ruedas@gmail.com.",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-    }).catch((error) => {
-      console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again later.");
-    })
-   }
+  };
 
   return (
-    <Flip left>
-      <div className="relative flex w-full overflow-hidden z-50">
-        <form className="flex flex-col justify-evenly items-start relative gap-2 w-full" 
-            onSubmit={handleSubmit}>
-          <label htmlFor="fullname" className="text-newbeige">
-            Full Name
-          </label>
-          <input
-            className="rounded-[3px] text-[.8em] w-full  p-1 bg-newbrown "
-            type="text"
-            placeholder="e.g. Juan Dela Cruz"
-            minLength="1"
-            required
-            onChange={handleInputChange}
-            id="fullname"
-          />
-          <label htmlFor="email" className="text-newbeige">
-            Email
-          </label>
-          <input
-            className="rounded-[3px] text-[.8em] w-full p-1  bg-newbrown "
-            type="email"
-            placeholder="e.g. jdelacruz@gmail.com"
-            minLength="1"
-            required
-            onChange={handleInputChange}
-            id="email"
-          />
-          <label htmlFor="subject" className="text-newbeige">
-            Subject
-          </label>
-          <input
-            className="rounded-[3px] text-[.8em]  w-full  p-1   bg-newbrown "
-            type="text"
-            placeholder="e.g Fix my header"
-            minLength="1"
-            required
-            onChange={handleInputChange}
-            id="subject"
-          />
-          <label htmlFor="message" className="text-newbeige">
-            Message
-          </label>
-          <textarea
-            className="rounded-[3px] text-[.8em] w-full min-h-[8em]  p-1   bg-newbrown  text-justify "
-            type="text"
-            required
-            minLength="1"
-            placeholder="What can I do for you?"
-            onChange={handleInputChange}
-            id="message"
-          />
-          <button
-            className="rounded-sm text-[.8em]  bg-newbeige text-newmaroon  text-center self-start px-3"
-            type="submit"
-            value="Send Message"
-          >
-            Send
-          </button>
-        </form>
+    <form
+      className="flex flex-col gap-4 w-full text-left font-poppins"
+      onSubmit={handleSubmit}
+    >
+      {feedback && (
+        <div
+          className={`p-3 rounded-lg text-xs sm:text-sm font-medium ${
+            feedback.type === "success"
+              ? "bg-green-100 text-green-800 border border-green-300"
+              : "bg-red-100 text-red-800 border border-red-300"
+          }`}
+        >
+          {feedback.text}
+        </div>
+      )}
+
+      <div>
+        <label htmlFor="fullname" className="block text-xs font-semibold uppercase tracking-wider text-newmaroon mb-1">
+          Full Name
+        </label>
+        <input
+          id="fullname"
+          type="text"
+          value={formData.fullname}
+          onChange={handleInputChange}
+          placeholder="Juan Dela Cruz"
+          required
+          className="w-full px-3.5 py-2 rounded-lg bg-newwhite border border-newbeige text-sm text-newbrown focus:outline-none focus:border-newmaroon"
+        />
       </div>
-    </Flip>
+
+      <div>
+        <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-newmaroon mb-1">
+          Email Address
+        </label>
+        <input
+          id="email"
+          type="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          placeholder="juan@example.com"
+          required
+          className="w-full px-3.5 py-2 rounded-lg bg-newwhite border border-newbeige text-sm text-newbrown focus:outline-none focus:border-newmaroon"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="subject" className="block text-xs font-semibold uppercase tracking-wider text-newmaroon mb-1">
+          Subject
+        </label>
+        <input
+          id="subject"
+          type="text"
+          value={formData.subject}
+          onChange={handleInputChange}
+          placeholder="Project Inquiry / Opportunity"
+          required
+          className="w-full px-3.5 py-2 rounded-lg bg-newwhite border border-newbeige text-sm text-newbrown focus:outline-none focus:border-newmaroon"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-newmaroon mb-1">
+          Message
+        </label>
+        <textarea
+          id="message"
+          rows={4}
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="How can I help you with your project?"
+          required
+          className="w-full px-3.5 py-2 rounded-lg bg-newwhite border border-newbeige text-sm text-newbrown focus:outline-none focus:border-newmaroon"
+        />
+      </div>
+
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="self-start px-6 py-2.5 rounded-lg bg-newmaroon text-newwhite text-sm font-semibold hover:bg-newbrown transition-colors disabled:opacity-50 shadow-sm cursor-pointer"
+      >
+        {isSubmitting ? "Sending..." : "Send Message"}
+      </button>
+    </form>
   );
 }
 

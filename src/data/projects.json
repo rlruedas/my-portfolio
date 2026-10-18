@@ -2,38 +2,35 @@
   "projectDetails": [
     {
       "projectName": "MAKATurismo",
-      "projectDesc": "Explore and Discover more about Makati. This is a tourism mobile application dedicated for you! Have fun around Makati ",
+      "category": "mobile",
+      "period": "Feb 2020 - Aug 2021",
+      "projectDesc": "Explore and Discover more about Makati. A tourism cross-platform mobile application featuring interactive maps, emergency assistance, and local amenity guides for residents and visitors.",
       "projectImg": "./projassets/makaturismo.webp",
       "projectAvailable": "",
       "projectLink": null,
-      "projectTechStack": "React Native | Firebase | Javascript | Git",
+      "projectTechStack": "React Native | Firebase | JavaScript | Git",
       "projectGithub": "https://github.com/rlruedas/Makaturismo-1.git"
     },
     {
       "projectName": "SNKRSHunt",
-      "projectDesc": "Snkrshunt is an entertainment / e-commerce(soon) / (your) personal sneaker website. It provides you the only interesting sneaker contents, which you will like. It's for the sneakerhead people, it present and offer the different shoe brands to choose from",
+      "category": "web",
+      "period": "2022",
+      "projectDesc": "Snkrshunt is an entertainment and sneaker discovery website. It curates high-interest sneaker content and brand showcases for sneakerheads and collectors.",
       "projectImg": "./projassets/snkrshunt.webp",
       "projectAvailable": "Visit the link",
       "projectLink": "https://snkrshunt.vercel.app/",
-      "projectTechStack": "React | POSTGres SQL | Express | NodeJS",
+      "projectTechStack": "React | PostgreSQL | Express | Node.js",
       "projectGithub": "https://github.com/rlruedas/SNKRHunt.git"
     },
     {
       "projectName": "QuotesCafe",
-      "projectDesc": "QuotesCafe is made for people who are looking for some motivations to start their day. Others just love to look for some words of affirmation to get through the day. The site provides some random motivational or inspirational quote to the user where they can share it on different social media platform",
+      "category": "web",
+      "period": "2022",
+      "projectDesc": "QuotesCafe delivers daily motivational quotes and words of affirmation, allowing visitors to discover, save, and share inspiration directly across social media channels.",
       "projectImg": "./projassets/quotescafe.webp",
       "projectAvailable": "Visit the link",
       "projectLink": "https://quotescafe.vercel.app/",
-      "projectTechStack": "NextJS | React | Tailwind | Javascript",
-      "projectGithub": ""
-    },
-    {
-      "projectName": "Coming Soon",
-      "projectDesc": "Coming Soon",
-      "projectImg": "Coming Soon",
-      "projectAvailable": "Coming Soon",
-      "projectLink": null,
-      "projectTechStack": "",
+      "projectTechStack": "Next.js | React | Tailwind CSS | JavaScript",
       "projectGithub": ""
     }
   ]

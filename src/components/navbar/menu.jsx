@@ -1,24 +1,31 @@
 import React from "react";
 
-function Menu(props) {
-  const { state } = props;
-
-  const scrollIntoView = (e, id) => {
-    e.preventDefault();
-    document.querySelector(`#${id}`).scrollIntoView();
-
-    state();
-  };
+function Menu({ isOpen, onClose }) {
+  const navLinks = [
+    { label: "About", href: "#About" },
+    { label: "Services", href: "#Services" },
+    { label: "Projects", href: "#Projects" },
+    { label: "Contact", href: "#Contact" },
+    { label: "Blog", href: "#Contact" },
+  ];
 
   return (
     <div
-      className="fixed top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center gap-6 z-40 font-poppins translate-x-full transition-all duration-500 bg-newmaroon text-newbeige text-[50px]"
+      className={`fixed inset-0 z-40 bg-newmaroon/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-2xl font-semibold font-poppins text-newwhite transition-transform duration-300 md:hidden ${
+        isOpen ? "translate-x-0" : "translate-x-full"
+      }`}
       id="Menu"
     >
-      <button onClick={(e) => scrollIntoView(e, "About")}>About</button>
-      <button onClick={(e) => scrollIntoView(e, "Services")}>Services</button>
-      <button onClick={(e) => scrollIntoView(e, "Projects")}>Projects</button>
-      <button onClick={(e) => scrollIntoView(e, "Contact")}>Contact</button>
+      {navLinks.map((link) => (
+        <a
+          key={link.label}
+          href={link.href}
+          onClick={onClose}
+          className="hover:text-newbeige transition-colors py-2 px-4"
+        >
+          {link.label}
+        </a>
+      ))}
     </div>
   );
 }

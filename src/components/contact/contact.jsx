@@ -3,42 +3,56 @@ import Form from "./form";
 import Info from "./info";
 import { Slide } from "react-swift-reveal";
 
-import { BsFillArrowRightSquareFill } from "react-icons/bs";
-
-import Image from "next/image";
-
-function BusinessCard() {
-  const [flipCard, setFlipCard] = useState(true);
+function Contact() {
+  const [activeView, setActiveView] = useState("info"); // 'info' | 'form'
 
   return (
-    <div
-      className="flex flex-col md:flex-row relative justify-evenly items-center w-full min-h-screen font-poppins text-newbeige gap-10"
+    <section
+      className="w-full max-w-5xl px-6 py-20 mx-auto font-poppins"
       id="Contact"
     >
-      <Slide top cascade>
-        <div className="w-fit flex flex-col justify-center items-center ">
-          <p className="contact-clamp font-bold">Here's my Business Card!</p>
+      <Slide bottom>
+        <div className="text-center mb-12">
+          <p className="text-xs uppercase tracking-widest font-semibold text-newbrown">
+            Get in touch
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-newmaroon mt-1">
+            Contact Me
+          </h2>
+          <div className="w-12 h-1 bg-newmaroon mx-auto mt-3 rounded-full" />
         </div>
-        <div className="relative w-fit flex justify-center items-center group ">
-          <div className="flex flex-row relative lg:flex-row z-10 gap-5 justify-center items-center rounded-2xl bg-newbeige text-black card-shadow p-5 transform duration-200 w-[18em] sm:w-[40em] h-[25em] py-[2em] ">
-            {flipCard ? <Info /> : <Form />}
-            <button onClick={() => setFlipCard(!flipCard)}>
-              <BsFillArrowRightSquareFill className="text-[28px] w-full text-newbeige" />
-            </button>
-          </div>
-          <div className="absolute top-2 left-2 z-0">
-            <Image
-              src="/hmu.webp"
-              alt="Image was here"
-              width={256}
-              height={256}
-              className=" w-64 h-64 hidden lg:block transform duration-300 group-hover:-translate-y-[12em]  "
-            />
-          </div>
+
+        {/* View Toggle */}
+        <div className="flex justify-center items-center gap-2 mb-8">
+          <button
+            onClick={() => setActiveView("info")}
+            className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors ${
+              activeView === "info"
+                ? "bg-newmaroon text-newwhite shadow-sm"
+                : "bg-newwhite text-newbrown border border-newbeige/50 hover:bg-newbeige/20"
+            }`}
+          >
+            Direct Details & Resume
+          </button>
+          <button
+            onClick={() => setActiveView("form")}
+            className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors ${
+              activeView === "form"
+                ? "bg-newmaroon text-newwhite shadow-sm"
+                : "bg-newwhite text-newbrown border border-newbeige/50 hover:bg-newbeige/20"
+            }`}
+          >
+            Send a Message
+          </button>
+        </div>
+
+        {/* Content Card */}
+        <div className="max-w-2xl mx-auto rounded-2xl bg-newwhite border border-newbeige/60 shadow-md p-6 sm:p-10">
+          {activeView === "info" ? <Info /> : <Form />}
         </div>
       </Slide>
-    </div>
+    </section>
   );
 }
 
-export default BusinessCard;
+export default Contact;
