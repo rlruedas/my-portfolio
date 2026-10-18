@@ -28,9 +28,7 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <div key={exp.company || idx} className="relative group">
               {/* Timeline marker */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full border-2 border-newmaroon bg-newwhite group-hover:bg-newbrown transition-colors flex items-center justify-center">
-                <span className="w-1.5 h-1.5 rounded-full bg-newmaroon" />
-              </div>
+              <div className="absolute -left-[32px] sm:-left-[41px] top-1.4 w-4 h-4 rounded-full border-2 border-newmaroon bg-newwhite group-hover:bg-newbrown transition-colors" />
 
               <div className="p-6 sm:p-8 rounded-2xl bg-newwhite border border-newbeige/60 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
